@@ -11,7 +11,7 @@
     "totalFrames": 10790,
     "totalDurationSec": 179.8,
     "sourceShotPlan": "TWINkle_Shot_Plan_v004.docx",
-    "updatedAt": "2026-11-25T14:39:51.190Z"
+    "updatedAt": "2026-11-25T15:42:41.424Z"
   },
   "stages": [
     {
@@ -1011,43 +1011,43 @@
         "status": "done",
         "version": "v006",
         "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T15:42:22.936Z"
       },
       "SQ01-SH02": {
         "status": "done",
         "version": "v006",
         "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T15:42:30.782Z"
       },
       "SQ01-SH03": {
         "status": "done",
         "version": "v006",
         "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T15:42:35.122Z"
       },
       "SQ01-SH04": {
         "status": "done",
         "version": "v006",
         "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T15:42:41.424Z"
       },
       "SQ02-SH01": {
         "status": "in_progress",
         "version": "v001",
         "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:39:42.488Z"
+        "updatedAt": "2026-11-25T14:58:59.057Z"
       },
       "SQ02-SH02": {
         "status": "in_progress",
         "version": "v001",
         "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:39:47.190Z"
+        "updatedAt": "2026-11-25T14:58:59.057Z"
       },
       "SQ02-SH03": {
         "status": "in_progress",
         "version": "v001",
         "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:39:51.190Z"
+        "updatedAt": "2026-11-25T14:58:59.057Z"
       },
       "SQ03-SH01": {
         "status": "todo",
