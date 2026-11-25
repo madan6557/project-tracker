@@ -182,7 +182,14 @@ export class ProgressionCanvas {
   }
 
   private applyTransform(): void {
-    this.world.style.transform = `translate3d(${this.panX.toFixed(1)}px, ${this.panY.toFixed(1)}px, 0) scale(${this.scale.toFixed(4)})`;
+    const w = Math.round(this.worldWidth * this.scale);
+    const h = Math.round(this.worldHeight * this.scale);
+    this.world.style.setProperty('--z', this.scale.toFixed(4));
+    this.world.style.width = `${w}px`;
+    this.world.style.height = `${h}px`;
+    this.world.style.transform = `translate(${Math.round(this.panX)}px, ${Math.round(this.panY)}px)`;
+    this.svgLayer.setAttribute('width', String(w));
+    this.svgLayer.setAttribute('height', String(h));
     this.zoomReadout.textContent = `${Math.round(this.scale * 100)}%`;
   }
 
@@ -343,11 +350,7 @@ export class ProgressionCanvas {
     const layout = this.computeLayout(sequences);
     this.worldWidth = layout.width;
     this.worldHeight = layout.height;
-    this.world.style.width = `${layout.width}px`;
-    this.world.style.height = `${layout.height}px`;
     this.svgLayer.setAttribute('viewBox', `0 0 ${layout.width} ${layout.height}`);
-    this.svgLayer.setAttribute('width', String(layout.width));
-    this.svgLayer.setAttribute('height', String(layout.height));
 
     const stageStats = store.getStageStats(stageId);
     const svgPaths: string[] = [];
@@ -356,7 +359,7 @@ export class ProgressionCanvas {
 
     // Stage Core Node
     nodeHtml.push(`
-      <div class="stage-core-node" style="left:${layout.coreX}px; top:${layout.coreY}px; border-color:${escapeHtml(stageAccent)};">
+      <div class="stage-core-node" style="--nx:${layout.coreX}px; --ny:${layout.coreY}px; border-color:${escapeHtml(stageAccent)};">
         <div class="stage-core-kicker">Active Stage</div>
         <div class="stage-core-name">${escapeHtml(stageShortName)}</div>
         <div class="stage-core-stat">${stageStats.done}/${stageStats.total} Shots · ${stageStats.percent}%</div>
@@ -395,7 +398,7 @@ export class ProgressionCanvas {
 
       const glyph = STATUS_GLYPHS[sqStats.derivedStatus];
       nodeHtml.push(`
-        <div class="sq-node-wrap ${seqMatchesFilter ? '' : 'is-dimmed'}" style="left:${item.x}px; top:${item.y}px;">
+        <div class="sq-node-wrap ${seqMatchesFilter ? '' : 'is-dimmed'}" style="--nx:${item.x}px; --ny:${item.y}px;">
           <button
             type="button"
             class="sq-node status-${sqStats.derivedStatus}"
@@ -441,7 +444,7 @@ export class ProgressionCanvas {
           <button
             type="button"
             class="shot-node status-${entry.status} ${matches ? '' : 'is-dimmed'}"
-            style="left:${x}px; top:${y}px;"
+            style="--nx:${x}px; --ny:${y}px;"
             data-sq-id="${escapeHtml(item.seq.id)}"
             data-shot-id="${escapeHtml(shot.id)}"
             aria-label="${escapeHtml(shot.fullCode)}, status ${STATUS_LABELS[entry.status]}, durasi ${shot.durationSec.toFixed(1)} detik"
