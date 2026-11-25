@@ -1389,6 +1389,29 @@ dialog.cosmic-dialog::backdrop {
   }
 }
 
+@media (max-width: 780px), (pointer: coarse) {
+  /* Disable heavy GPU blur & SVG shadow filters on mobile for 60fps touch performance */
+  .nebula-glow {
+    display: none;
+  }
+  .hud-header,
+  .sq-jump-strip,
+  dialog.cosmic-dialog::backdrop {
+    backdrop-filter: none;
+  }
+  .conduit-spine.is-done,
+  .conduit-branch.status-done {
+    filter: none;
+  }
+  .hud-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .sq-jump-btn {
+    padding: 5px 11px;
+  }
+}
+
 @media (max-width: 780px) {
   .app-shell {
     padding: 8px 10px 12px;

@@ -35,12 +35,16 @@ export class ProgressionCanvas {
   private worldHeight = 960;
   private seqCoords = new Map<string, { x: number; y: number }>();
 
-  // Pointer drag state
-  private activePointerId: number | null = null;
+  // Pointer drag & multi-touch pinch state
+  private pointers = new Map<number, { x: number; y: number }>();
   private dragStartX = 0;
   private dragStartY = 0;
   private panStartX = 0;
   private panStartY = 0;
+  private pinchStartDist = 0;
+  private pinchStartScale = 1;
+  private pinchLastMidX = 0;
+  private pinchLastMidY = 0;
   private didDrag = false;
 
   constructor(
@@ -70,41 +74,83 @@ export class ProgressionCanvas {
   }
 
   private bindInteractions(): void {
-    // Pointer Pan (distinguishes drag >5px from click on buttons)
+    // Pointer Pan & Two-Finger Pinch-to-Zoom (distinguishes drag >5px from tap/click)
     this.viewport.addEventListener('pointerdown', (e) => {
-      if (e.button !== 0) return;
-      this.activePointerId = e.pointerId;
-      this.dragStartX = e.clientX;
-      this.dragStartY = e.clientY;
-      this.panStartX = this.panX;
-      this.panStartY = this.panY;
-      this.didDrag = false;
-    });
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
-    window.addEventListener('pointermove', (e) => {
-      if (this.activePointerId !== e.pointerId) return;
-      const dx = e.clientX - this.dragStartX;
-      const dy = e.clientY - this.dragStartY;
-      if (!this.didDrag && Math.hypot(dx, dy) > 5) {
+      if (this.pointers.size === 1) {
+        this.dragStartX = e.clientX;
+        this.dragStartY = e.clientY;
+        this.panStartX = this.panX;
+        this.panStartY = this.panY;
+        this.didDrag = false;
+      } else if (this.pointers.size === 2) {
+        const pts = Array.from(this.pointers.values());
+        this.pinchStartDist = Math.max(1, Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y));
+        this.pinchStartScale = this.scale;
+        this.pinchLastMidX = (pts[0].x + pts[1].x) / 2;
+        this.pinchLastMidY = (pts[0].y + pts[1].y) / 2;
         this.didDrag = true;
         this.viewport.classList.add('is-panning');
       }
-      if (this.didDrag) {
-        this.panX = this.panStartX + dx;
-        this.panY = this.panStartY + dy;
-        this.applyTransform();
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (!this.pointers.has(e.pointerId)) return;
+      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (this.pointers.size === 2) {
+        const pts = Array.from(this.pointers.values());
+        const dist = Math.max(1, Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y));
+        const midX = (pts[0].x + pts[1].x) / 2;
+        const midY = (pts[0].y + pts[1].y) / 2;
+
+        // Pan with midpoint movement
+        this.panX += midX - this.pinchLastMidX;
+        this.panY += midY - this.pinchLastMidY;
+        this.pinchLastMidX = midX;
+        this.pinchLastMidY = midY;
+
+        // Zoom anchored at midpoint inside viewport
+        const rect = this.viewport.getBoundingClientRect();
+        this.zoomAt(this.pinchStartScale * (dist / this.pinchStartDist), midX - rect.left, midY - rect.top);
+        return;
+      }
+
+      if (this.pointers.size === 1) {
+        const dx = e.clientX - this.dragStartX;
+        const dy = e.clientY - this.dragStartY;
+        if (!this.didDrag && Math.hypot(dx, dy) > 5) {
+          this.didDrag = true;
+          this.viewport.classList.add('is-panning');
+        }
+        if (this.didDrag) {
+          this.panX = this.panStartX + dx;
+          this.panY = this.panStartY + dy;
+          this.applyTransform();
+        }
       }
     });
 
     const endPan = (e: PointerEvent): void => {
-      if (this.activePointerId !== e.pointerId) return;
-      this.activePointerId = null;
-      this.viewport.classList.remove('is-panning');
-      if (this.didDrag) {
-        // Suppress accidental click right after dragging
-        setTimeout(() => {
-          this.didDrag = false;
-        }, 0);
+      if (!this.pointers.has(e.pointerId)) return;
+      this.pointers.delete(e.pointerId);
+
+      if (this.pointers.size === 1) {
+        // Remaining finger continues panning smoothly from current pan
+        const [rem] = Array.from(this.pointers.values());
+        this.dragStartX = rem.x;
+        this.dragStartY = rem.y;
+        this.panStartX = this.panX;
+        this.panStartY = this.panY;
+      } else if (this.pointers.size === 0) {
+        this.viewport.classList.remove('is-panning');
+        if (this.didDrag) {
+          setTimeout(() => {
+            this.didDrag = false;
+          }, 0);
+        }
       }
     };
     window.addEventListener('pointerup', endPan);
