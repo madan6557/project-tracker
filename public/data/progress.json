@@ -11,7 +11,7 @@
     "totalFrames": 10790,
     "totalDurationSec": 179.8,
     "sourceShotPlan": "TWINkle_Shot_Plan_v004.docx",
-    "updatedAt": "2026-11-25T13:59:12+00:00"
+    "updatedAt": "2026-11-25T14:39:51.190Z"
   },
   "stages": [
     {
@@ -77,7 +77,7 @@
       "folderName": "SQ001_Neutron_Encounter",
       "title": "Neutron Encounter",
       "timeRange": "00:00.0 – 00:16.0",
-      "durationSec": 16.0,
+      "durationSec": 16,
       "totalFrames": 960,
       "shots": [
         {
@@ -89,7 +89,7 @@
           "frames60fps": "1-420",
           "frameCount60fps": 420,
           "timeRange": "00:00.0 – 00:07.0",
-          "durationSec": 7.0,
+          "durationSec": 7,
           "summary": "Opening: J mengorbit Nstar (CCW). E muncul dengan timing & kurva akselerasi (pelan -> cepat) persis animatic. Wajib terjadi flash dulu baru E bergerak; karena masih jauh, E tampil sebagai cahaya bintang..."
         },
         {
@@ -159,7 +159,7 @@
           "frames60fps": "1111-1410",
           "frameCount60fps": 300,
           "timeRange": "00:18.5 – 00:23.5",
-          "durationSec": 5.0,
+          "durationSec": 5,
           "summary": "Fokus ke fragmen spesifik Sola & Sora (ber-comet trail) yang menabrak batu lain hingga Sora terlepas. Sola meluncurkan jaring oranye (persis animatic) namun gagal menggapai, lalu memisahkan diri mengejar..."
         },
         {
@@ -171,7 +171,7 @@
           "frames60fps": "1411-1590",
           "frameCount60fps": 180,
           "timeRange": "00:23.5 – 00:26.5",
-          "durationSec": 3.0,
+          "durationSec": 3,
           "summary": "Tampilkan perpisahan trajektori antara Sola & Sora terhadap fragmen utama. Rasio jarak dan kecepatan mengikuti animatic secara persis, disertai comet trail di belakang subjek untuk estetika."
         }
       ]
@@ -205,7 +205,7 @@
           "frames60fps": "1881-2120",
           "frameCount60fps": 240,
           "timeRange": "00:31.3 – 00:35.3",
-          "durationSec": 4.0,
+          "durationSec": 4,
           "summary": "Layar hitam di animatic disederhanakan; wujudkan sebagai distorsi tunnel wormhole space sci-fi (referensi utama: adegan masuk wormhole di game Species Unknown) dengan Sola-Sora di dalamnya, lalu ditutup flash..."
         },
         {
@@ -287,7 +287,7 @@
           "frames60fps": "2971-3270",
           "frameCount60fps": 300,
           "timeRange": "00:49.5 – 00:54.5",
-          "durationSec": 5.0,
+          "durationSec": 5,
           "summary": "Masih di dalam Cosmic Cloud -> menjelang keluar, Sora menghilang tertutup awan; saat keluar terlihat Sora berada di cabang berbeda dan masuk ke wormhole Cosmic Tunnel, diikuti Sola. Tekankan gerak garis..."
         }
       ]
@@ -309,7 +309,7 @@
           "frames60fps": "3271-3450",
           "frameCount60fps": 180,
           "timeRange": "00:54.5 – 00:57.5",
-          "durationSec": 3.0,
+          "durationSec": 3,
           "summary": "Transisi wormhole keluar dari region sebelumnya memasuki Reverse Starfall Region—tegaskan arah starfall meluncur dari bawah ke atas layar (sketch 12 fps)."
         },
         {
@@ -355,7 +355,7 @@
           "frames60fps": "3611-3790",
           "frameCount60fps": 180,
           "timeRange": "01:00.2 – 01:03.2",
-          "durationSec": 3.0,
+          "durationSec": 3,
           "summary": "Transisi masuk ke Cosmic Tunnel Region berdensitas sangat padat dengan banyak percabangan. Tekankan perjalanan di dalam tabung melalui pergerakan aktif garis lengkung & cincin/lingkaran dinding bercabang..."
         },
         {
@@ -437,7 +437,7 @@
           "frames60fps": "4671-4730",
           "frameCount60fps": 60,
           "timeRange": "01:17.8 – 01:18.8",
-          "durationSec": 1.0,
+          "durationSec": 1,
           "summary": "Objek di tengah frame adalah Sola versi kristal (wujud asli Topaz sebelum bertransformasi menjadi humanoid); tampilkan sebagai kristal geometris yang berkilau halus."
         },
         {
@@ -473,7 +473,7 @@
           "frames60fps": "4931-5050",
           "frameCount60fps": 120,
           "timeRange": "01:22.2 – 01:24.2",
-          "durationSec": 2.0,
+          "durationSec": 2,
           "summary": "Sola mendongak melihat ke atas ke arah kemunculan versi dirinya yang lain; animasikan pergerakan kepala & tatapan ke atas secara jelas di 12 fps."
         },
         {
@@ -567,7 +567,7 @@
           "frames60fps": "5841-5960",
           "frameCount60fps": 120,
           "timeRange": "01:37.3 – 01:39.3",
-          "durationSec": 2.0,
+          "durationSec": 2,
           "summary": "Sosok pada shot ini adalah Sola versi piyama; mulai mengalami red-tinted fading (memudar berwarna merah seperti efek mendekat/masuk ke black hole)."
         },
         {
@@ -591,7 +591,7 @@
           "frames60fps": "6041-6160",
           "frameCount60fps": 120,
           "timeRange": "01:40.7 – 01:42.7",
-          "durationSec": 2.0,
+          "durationSec": 2,
           "summary": "Sosok ini adalah Sola versi underwear saja (pakaian dalam bawah setelah melepas lab shirt pada file 3D Sola-Sora-V2), dan juga mengalami efek red fading."
         },
         {
@@ -637,7 +637,7 @@
       "folderName": "SQ009_Galaxy_Reveal",
       "title": "Galaxy Reveal",
       "timeRange": "01:48.0 – 02:01.0",
-      "durationSec": 13.0,
+      "durationSec": 13,
       "totalFrames": 780,
       "shots": [
         {
@@ -765,7 +765,7 @@
       "folderName": "SQ011_Sola_Chooses",
       "title": "Sola Chooses",
       "timeRange": "02:13.7 – 02:20.7",
-      "durationSec": 7.0,
+      "durationSec": 7,
       "totalFrames": 420,
       "shots": [
         {
@@ -777,7 +777,7 @@
           "frames60fps": "8021-8080",
           "frameCount60fps": 60,
           "timeRange": "02:13.7 – 02:14.7",
-          "durationSec": 1.0,
+          "durationSec": 1,
           "summary": "Sola menimbang pilihan (desain V2 konsisten); jeda batin cukup mengikuti timing animatic karena adegan ini berulang lagi setelah insert memandang galaksi."
         },
         {
@@ -813,7 +813,7 @@
           "frames60fps": "8261-8440",
           "frameCount60fps": 180,
           "timeRange": "02:17.7 – 02:20.7",
-          "durationSec": 3.0,
+          "durationSec": 3,
           "summary": "Sola mengambil ancang-ancang lalu secara instan berubah menjadi berkas cahaya dan melesat menuju bintang biru Sora di kejauhan."
         }
       ]
@@ -1032,19 +1032,22 @@
         "updatedAt": "2026-11-25T13:54:31+00:00"
       },
       "SQ02-SH01": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Scaffold range file siap diblocking",
+        "updatedAt": "2026-11-25T14:39:42.488Z"
       },
       "SQ02-SH02": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Scaffold range file siap diblocking",
+        "updatedAt": "2026-11-25T14:39:47.190Z"
       },
       "SQ02-SH03": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Scaffold range file siap diblocking",
+        "updatedAt": "2026-11-25T14:39:51.190Z"
       },
       "SQ03-SH01": {
         "status": "todo",
