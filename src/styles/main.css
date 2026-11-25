@@ -288,6 +288,10 @@ select {
   font-weight: 500;
 }
 
+.btn[hidden] {
+  display: none;
+}
+
 .btn:hover,
 .filter-chip:hover,
 .hud-tool-btn:hover,

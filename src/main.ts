@@ -81,7 +81,10 @@ async function bootstrap(): Promise<void> {
     overallMeterFillEl.style.width = `${overall.percent}%`;
     overallCountEl.textContent = `${overall.completedUnits}/${overall.totalUnits} unit`;
 
-    draftBadgeEl.hidden = !store.getHasDraft();
+    const adminUnlocked = store.isAdminUnlocked();
+    btnEditMode.hidden = !adminUnlocked;
+    btnOpenSync.hidden = !adminUnlocked;
+    draftBadgeEl.hidden = !adminUnlocked || !store.getHasDraft();
 
     const isVeyric = store.isVeyricTitle();
     projectTitleEl.classList.toggle('is-veyric', isVeyric);
@@ -122,6 +125,29 @@ async function bootstrap(): Promise<void> {
   btnVeyricToggle.addEventListener('click', () => store.toggleVeyricTitle());
   btnEditMode.addEventListener('click', () => store.toggleEditMode());
   btnOpenSync.addEventListener('click', () => syncDialog.open());
+
+  // Secret owner unlock: Ctrl+Shift+E on desktop, or 5 rapid taps on brand logo/emblem on mobile
+  window.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'e') {
+      e.preventDefault();
+      store.toggleAdminUnlocked();
+    }
+  });
+
+  let tapCount = 0;
+  let tapResetTimer: number | undefined;
+  must<HTMLElement>('.brand-cluster').addEventListener('click', () => {
+    tapCount++;
+    if (tapResetTimer !== undefined) window.clearTimeout(tapResetTimer);
+    if (tapCount >= 5) {
+      tapCount = 0;
+      store.toggleAdminUnlocked();
+      return;
+    }
+    tapResetTimer = window.setTimeout(() => {
+      tapCount = 0;
+    }, 1800);
+  });
 
   btnViewMap.addEventListener('click', () => store.setViewMode('map'));
   btnViewTree.addEventListener('click', () => store.setViewMode('tree'));

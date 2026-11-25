@@ -29,7 +29,8 @@ export class InspectorDialog {
     const activeStage = doc.stages.find((s) => s.id === stageId) ?? doc.stages[0];
     const seq = doc.sequences.find((s) => s.id === sqId);
     const entry = store.getShotEntry(stageId, shot.id);
-    const editMode = store.isEditMode();
+    const adminUnlocked = store.isAdminUnlocked();
+    const editMode = adminUnlocked && store.isEditMode();
 
     const crossStageHtml = doc.stages
       .map((st) => {
@@ -122,7 +123,7 @@ export class InspectorDialog {
              </div>`
           : `<div class="sync-card">
                <p><strong>Versi:</strong> ${escapeHtml(entry.version || '—')} · <strong>Catatan:</strong> ${escapeHtml(entry.note || 'Belum ada catatan.')}</p>
-               <div><button type="button" class="btn btn-toggle" id="enable-edit-from-modal">✎ Aktifkan Edit Mode untuk Ubah Status</button></div>
+               ${adminUnlocked ? `<div><button type="button" class="btn btn-toggle" id="enable-edit-from-modal">✎ Aktifkan Edit Mode untuk Ubah Status</button></div>` : ''}
              </div>`
       }
     `;
@@ -168,7 +169,8 @@ export class InspectorDialog {
     const stageId = store.getActiveStageId();
     const activeStage = doc.stages.find((s) => s.id === stageId) ?? doc.stages[0];
     const sqStats = store.getSequenceStats(stageId, seq);
-    const editMode = store.isEditMode();
+    const adminUnlocked = store.isAdminUnlocked();
+    const editMode = adminUnlocked && store.isEditMode();
 
     const shotRows = seq.shots
       .map((sh) => {
@@ -225,10 +227,12 @@ export class InspectorDialog {
                </div>
                <div class="status-picker" style="grid-template-columns:repeat(2,minmax(0,1fr));">${bulkBtns}</div>
              </div>`
-          : `<div class="sync-card">
-               <p>Aktifkan <strong>Edit Mode</strong> untuk mengubah status seluruh shot di ${escapeHtml(seq.id)} sekaligus atau klik masing-masing shot di bawah.</p>
-               <div><button type="button" class="btn btn-toggle" id="enable-edit-sq">✎ Aktifkan Edit Mode</button></div>
-             </div>`
+          : adminUnlocked
+            ? `<div class="sync-card">
+                 <p>Aktifkan <strong>Edit Mode</strong> untuk mengubah status seluruh shot di ${escapeHtml(seq.id)} sekaligus atau klik masing-masing shot di bawah.</p>
+                 <div><button type="button" class="btn btn-toggle" id="enable-edit-sq">✎ Aktifkan Edit Mode</button></div>
+               </div>`
+            : ''
       }
 
       <div>

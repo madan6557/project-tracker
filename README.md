@@ -7,7 +7,9 @@ Website statis bertema kosmik untuk memantau progres produksi film pendek animas
 - **Macro Stage Spine (8 Stage):** `Blocking / Layout` → `Animation Polish` → `Lookdev` → `VFX / FX` → `Lighting` → `Rendering` → `Compositing` → `Editing & Delivery` *(tanpa tahap split per shot)*.
 - **Interactive Game Progression Map:** Peta konstelasi 2D (*Star-Chart*) tempat setiap **SQ** menjadi node root dengan cabang **Shot** yang bisa di-expand/collapse, mendukung pan, zoom, Fit All, Quick SQ Jump, filter status, dan toggle ke **Compact Scene Tree**.
 - **Inspector Detail & Cross-Stage View:** Klik node SQ atau Shot untuk melihat frame `6 fps` & `60 fps`, durasi, ringkasan storyboard, dan progres shot tersebut di seluruh 8 stage.
-- **100% Statis & 3 Cara Update Data Praktis:**
+- **100% Statis, Read-Only untuk Publik & 3 Cara Update Data:**
+  - **Publik (Default):** Website tampil murni **Read-Only** tanpa tombol edit atau ekspor.
+  - **Owner Admin Unlock:** Untuk memunculkan tombol **Edit Mode** dan **Sync / Export**, buka URL dengan `?admin=1` (mis. `https://twinkle.morneven.com/?admin=1`), tekan **`Ctrl + Shift + E`**, atau tap **logo/judul TWINkle 5× cepat** (di HP).
   1. **Edit Mode + Export `progress.json`:** Aktifkan **Edit Mode** di header, ubah status shot (atau 1 SQ sekaligus), unduh `progress.json` untuk menimpa `public/data/progress.json`.
   2. **Script Auto-Sync Lokal:** Jalankan dari workspace Blender:
      ```powershell

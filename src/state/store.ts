@@ -8,6 +8,7 @@ import type {
 } from '../types';
 
 const DRAFT_STORAGE_KEY = 'twinkle_tracker_draft_v1';
+const ADMIN_SESSION_KEY = 'twinkle_tracker_admin_v1';
 
 export const STATUS_ORDER: ProgressStatus[] = ['todo', 'in_progress', 'review', 'done'];
 
@@ -31,6 +32,7 @@ class TrackerStore {
   private publishedDoc: ProjectProgressDocument | null = null;
   private doc: ProjectProgressDocument | null = null;
   private hasDraft = false;
+  private adminUnlocked = false;
   private activeStageId = 'blocking';
   private editMode = false;
   private veyricTitle = false;
@@ -49,6 +51,21 @@ class TrackerStore {
     for (const fn of this.listeners) fn();
   }
 
+  private applySavedDraftIfAny(): void {
+    if (!this.doc) return;
+    const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (!savedDraft) return;
+    try {
+      const draftProgress = JSON.parse(savedDraft) as Record<string, Record<string, ProgressEntry>>;
+      if (draftProgress && typeof draftProgress === 'object') {
+        this.doc.progress = draftProgress;
+        this.hasDraft = true;
+      }
+    } catch {
+      localStorage.removeItem(DRAFT_STORAGE_KEY);
+    }
+  }
+
   async init(): Promise<void> {
     const resp = await fetch('./data/progress.json', { cache: 'no-cache' });
     if (!resp.ok) {
@@ -58,17 +75,12 @@ class TrackerStore {
     this.publishedDoc = structuredClone(raw);
     this.doc = structuredClone(raw);
 
-    const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
-    if (savedDraft) {
-      try {
-        const draftProgress = JSON.parse(savedDraft) as Record<string, Record<string, ProgressEntry>>;
-        if (draftProgress && typeof draftProgress === 'object') {
-          this.doc.progress = draftProgress;
-          this.hasDraft = true;
-        }
-      } catch {
-        localStorage.removeItem(DRAFT_STORAGE_KEY);
-      }
+    const params = new URLSearchParams(window.location.search);
+    const hasAdminParam = params.get('admin') === '1' || params.get('edit') === '1';
+    if (hasAdminParam || sessionStorage.getItem(ADMIN_SESSION_KEY) === '1') {
+      this.adminUnlocked = true;
+      sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
+      this.applySavedDraftIfAny();
     }
 
     if (this.doc.stages.length > 0 && !this.doc.stages.some((s) => s.id === this.activeStageId)) {
@@ -86,6 +98,35 @@ class TrackerStore {
     return this.hasDraft;
   }
 
+  isAdminUnlocked(): boolean {
+    return this.adminUnlocked;
+  }
+
+  unlockAdmin(): void {
+    if (this.adminUnlocked) return;
+    this.adminUnlocked = true;
+    sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
+    this.applySavedDraftIfAny();
+    this.emit();
+  }
+
+  lockAdmin(): void {
+    if (!this.adminUnlocked) return;
+    this.adminUnlocked = false;
+    this.editMode = false;
+    this.hasDraft = false;
+    sessionStorage.removeItem(ADMIN_SESSION_KEY);
+    if (this.publishedDoc) {
+      this.doc = structuredClone(this.publishedDoc);
+    }
+    this.emit();
+  }
+
+  toggleAdminUnlocked(): void {
+    if (this.adminUnlocked) this.lockAdmin();
+    else this.unlockAdmin();
+  }
+
   getActiveStageId(): string {
     return this.activeStageId;
   }
@@ -97,10 +138,11 @@ class TrackerStore {
   }
 
   isEditMode(): boolean {
-    return this.editMode;
+    return this.adminUnlocked && this.editMode;
   }
 
   toggleEditMode(): void {
+    if (!this.adminUnlocked) return;
     this.editMode = !this.editMode;
     this.emit();
   }
