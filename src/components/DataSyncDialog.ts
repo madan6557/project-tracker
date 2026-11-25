@@ -144,36 +144,44 @@ export class DataSyncDialog {
 
       try {
         const apiUrl = `https://api.github.com/repos/${DEFAULT_OWNER}/${DEFAULT_REPO}/contents/${DEFAULT_FILE_PATH}`;
-        const metaResp = await fetch(`${apiUrl}?ref=${DEFAULT_BRANCH}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/vnd.github+json',
-          },
-        });
-        if (!metaResp.ok) {
-          throw new Error(`Gagal membaca SHA file di GitHub (HTTP ${metaResp.status}). Cek token & izin repo.`);
-        }
-        const metaJson = (await metaResp.json()) as { sha: string };
-
         const jsonBytes = new TextEncoder().encode(store.exportJsonString());
         let binary = '';
         for (const byte of jsonBytes) binary += String.fromCharCode(byte);
         const contentBase64 = btoa(binary);
 
-        const putResp = await fetch(apiUrl, {
-          method: 'PUT',
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/vnd.github+json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            message: `chore: update TWINkle progress.json (${new Date().toISOString().slice(0, 16)}Z)`,
-            content: contentBase64,
-            sha: metaJson.sha,
-            branch: DEFAULT_BRANCH,
-          }),
-        });
+        const pushWithFreshSha = async (): Promise<Response> => {
+          const metaResp = await fetch(`${apiUrl}?ref=${DEFAULT_BRANCH}&_t=${Date.now()}`, {
+            cache: 'no-store',
+            headers: {
+              Authorization: `Bearer ${token}`,
+              Accept: 'application/vnd.github+json',
+            },
+          });
+          if (!metaResp.ok) {
+            throw new Error(`Gagal membaca SHA file di GitHub (HTTP ${metaResp.status}). Cek token & izin repo.`);
+          }
+          const metaJson = (await metaResp.json()) as { sha: string };
+
+          return fetch(apiUrl, {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${token}`,
+              Accept: 'application/vnd.github+json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: `chore: update TWINkle progress.json (${new Date().toISOString().slice(0, 16)}Z)`,
+              content: contentBase64,
+              sha: metaJson.sha,
+              branch: DEFAULT_BRANCH,
+            }),
+          });
+        };
+
+        let putResp = await pushWithFreshSha();
+        if (putResp.status === 409) {
+          putResp = await pushWithFreshSha();
+        }
         if (!putResp.ok) {
           throw new Error(`Gagal commit ke GitHub (HTTP ${putResp.status}).`);
         }
