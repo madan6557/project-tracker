@@ -162,31 +162,19 @@ select {
 
 .project-title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.project-title.is-veyric {
   font-family: var(--font-veyric);
-  letter-spacing: 0;
-  font-kerning: none;
+  font-size: 1.6rem;
   font-weight: 400;
-  font-size: 1.55rem;
-}
-
-.title-accent {
-  color: var(--sora-zircon);
-}
-
-.veyric-tag {
-  font-family: var(--font-veyric);
   letter-spacing: 0;
   font-kerning: none;
-  font-size: 0.95rem;
+}
+
+.title-twin {
   color: var(--sola-topaz);
-  opacity: 0.9;
+}
+
+.title-kle {
+  color: var(--sora-zircon);
 }
 
 .subbrand-row {

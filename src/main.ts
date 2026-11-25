@@ -16,14 +16,12 @@ function must<T extends HTMLElement | SVGSVGElement>(selector: string): T {
 }
 
 async function bootstrap(): Promise<void> {
-  const projectTitleEl = must<HTMLElement>('#project-title');
   const metaSpecsEl = must<HTMLElement>('#meta-specs');
   const overallPercentEl = must<HTMLElement>('#overall-percent');
   const overallMeterFillEl = must<HTMLElement>('#overall-meter-fill');
   const overallCountEl = must<HTMLElement>('#overall-count');
   const draftBadgeEl = must<HTMLElement>('#draft-badge');
 
-  const btnVeyricToggle = must<HTMLButtonElement>('#btn-veyric-toggle');
   const btnEditMode = must<HTMLButtonElement>('#btn-edit-mode');
   const btnOpenSync = must<HTMLButtonElement>('#btn-open-sync');
 
@@ -86,10 +84,6 @@ async function bootstrap(): Promise<void> {
     btnOpenSync.hidden = !adminUnlocked;
     draftBadgeEl.hidden = !adminUnlocked || !store.getHasDraft();
 
-    const isVeyric = store.isVeyricTitle();
-    projectTitleEl.classList.toggle('is-veyric', isVeyric);
-    btnVeyricToggle.setAttribute('aria-pressed', String(isVeyric));
-
     const isEdit = store.isEditMode();
     btnEditMode.setAttribute('aria-pressed', String(isEdit));
 
@@ -122,7 +116,6 @@ async function bootstrap(): Promise<void> {
   store.subscribe(renderAll);
 
   // Header & Toolbar Listeners
-  btnVeyricToggle.addEventListener('click', () => store.toggleVeyricTitle());
   btnEditMode.addEventListener('click', () => store.toggleEditMode());
   btnOpenSync.addEventListener('click', () => syncDialog.open());
 

@@ -35,7 +35,6 @@ class TrackerStore {
   private adminUnlocked = false;
   private activeStageId = 'blocking';
   private editMode = false;
-  private veyricTitle = false;
   private viewMode: 'map' | 'tree' = 'map';
   private filterStatus: 'all' | ProgressStatus = 'all';
   private searchQuery = '';
@@ -144,15 +143,6 @@ class TrackerStore {
   toggleEditMode(): void {
     if (!this.adminUnlocked) return;
     this.editMode = !this.editMode;
-    this.emit();
-  }
-
-  isVeyricTitle(): boolean {
-    return this.veyricTitle;
-  }
-
-  toggleVeyricTitle(): void {
-    this.veyricTitle = !this.veyricTitle;
     this.emit();
   }
 
