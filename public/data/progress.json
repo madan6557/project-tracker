@@ -1,0 +1,1367 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "projectName": "TWINkle",
+    "subtitle": "Kilapan Kembar",
+    "poweredBy": "Morneven",
+    "fps": 60,
+    "animaticFps": 6,
+    "totalSequences": 14,
+    "totalShots": 66,
+    "totalFrames": 10790,
+    "totalDurationSec": 179.8,
+    "sourceShotPlan": "TWINkle_Shot_Plan_v004.docx",
+    "updatedAt": "2026-11-25T13:59:12+00:00"
+  },
+  "stages": [
+    {
+      "id": "blocking",
+      "name": "Blocking / Layout",
+      "shortName": "Blocking",
+      "description": "Posisi kamera, skala objek, lintasan gerak, rotasi dasar, dan sinkronisasi beat musik.",
+      "accentColor": "#59D6FF"
+    },
+    {
+      "id": "animation",
+      "name": "Animation Polish",
+      "shortName": "Animation",
+      "description": "Penghalusan kurva gerak (splining), timing detail, dan ekspresi gerak per shot.",
+      "accentColor": "#7AE7C7"
+    },
+    {
+      "id": "lookdev",
+      "name": "Lookdev",
+      "shortName": "Lookdev",
+      "description": "Shader, material, tekstur permukaan planet, kristal Jewerlian, dan atmosfer kosmik.",
+      "accentColor": "#F6C85F"
+    },
+    {
+      "id": "vfx",
+      "name": "VFX / FX",
+      "shortName": "VFX",
+      "description": "Simulasi partikel, serpihan tabrakan, trail energi, nebula, dan efek Shared_FX.",
+      "accentColor": "#FF8A65"
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting",
+      "shortName": "Lighting",
+      "description": "Tata cahaya dramatis per kamera shot agar siluet, pijar Nstar, dan mood optimal.",
+      "accentColor": "#FFD54F"
+    },
+    {
+      "id": "rendering",
+      "name": "Rendering",
+      "shortName": "Rendering",
+      "description": "Render produksi final per shot (EXR/PNG sequence) sesuai budget dan resolusi proyek.",
+      "accentColor": "#B388FF"
+    },
+    {
+      "id": "compositing",
+      "name": "Compositing",
+      "shortName": "Compositing",
+      "description": "Bloom/glare, integrasi pass, color grading kosmik, dan sentuhan akhir gambar.",
+      "accentColor": "#F06292"
+    },
+    {
+      "id": "delivery",
+      "name": "Editing & Delivery",
+      "shortName": "Delivery",
+      "description": "Penyusunan timeline akhir + audio di 05_Edit serta ekspor master ke 06_Delivery.",
+      "accentColor": "#4DD0E1"
+    }
+  ],
+  "sequences": [
+    {
+      "id": "SQ01",
+      "folderName": "SQ001_Neutron_Encounter",
+      "title": "Neutron Encounter",
+      "timeRange": "00:00.0 – 00:16.0",
+      "durationSec": 16.0,
+      "totalFrames": 960,
+      "shots": [
+        {
+          "id": "SQ01-SH01",
+          "no": 1,
+          "code": "SH01",
+          "fullCode": "SQ01 — SH01",
+          "frames6fps": "F0001–F0042",
+          "frames60fps": "1-420",
+          "frameCount60fps": 420,
+          "timeRange": "00:00.0 – 00:07.0",
+          "durationSec": 7.0,
+          "summary": "Opening: J mengorbit Nstar (CCW). E muncul dengan timing & kurva akselerasi (pelan -> cepat) persis animatic. Wajib terjadi flash dulu baru E bergerak; karena masih jauh, E tampil sebagai cahaya bintang..."
+        },
+        {
+          "id": "SQ01-SH02",
+          "no": 2,
+          "code": "SH02",
+          "fullCode": "SQ01 — SH02",
+          "frames6fps": "F0043–F0067",
+          "frames60fps": "421-670",
+          "frameCount60fps": 250,
+          "timeRange": "00:07.0 – 00:11.2",
+          "durationSec": 4.2,
+          "summary": "E masuk orbit J hingga bertabrakan. J memunculkan shield pelindung agar tak rusak, sementara E rusak dan sebagian materialnya tersebar. Trajektori keduanya berubah; kamera pasca-tabrakan terkunci mengikuti J..."
+        },
+        {
+          "id": "SQ01-SH03",
+          "no": 3,
+          "code": "SH03",
+          "fullCode": "SQ01 — SH03",
+          "frames6fps": "F0068–F0080",
+          "frames60fps": "671-800",
+          "frameCount60fps": 130,
+          "timeRange": "00:11.2 – 00:13.3",
+          "durationSec": 2.2,
+          "summary": "Top shot perubahan trajektori pascatabrakan: J menjauh ke kiri dan E berbelok menuju Nstar. Kunci timing: pelepasan pelindung/shield J terjadi di sekitar setengah durasi shot."
+        },
+        {
+          "id": "SQ01-SH04",
+          "no": 4,
+          "code": "SH04",
+          "fullCode": "SQ01 — SH04",
+          "frames6fps": "F0081–F0096",
+          "frames60fps": "801-960",
+          "frameCount60fps": 160,
+          "timeRange": "00:13.3 – 00:16.0",
+          "durationSec": 2.7,
+          "summary": "E memicu ledakan Nstar (flash lalu blast). Pelindung J retak dan pecah seperti kaca; pecahan J tampil sebagai batu pecah akibat tekanan/benturan dengan ion blast yang mengalir melewati sela-sela pecahan."
+        }
+      ]
+    },
+    {
+      "id": "SQ02",
+      "folderName": "SQ002_Fragmentation",
+      "title": "Fragmentation",
+      "timeRange": "00:16.0 – 00:26.5",
+      "durationSec": 10.5,
+      "totalFrames": 630,
+      "shots": [
+        {
+          "id": "SQ02-SH01",
+          "no": 5,
+          "code": "SH01",
+          "fullCode": "SQ02 — SH01",
+          "frames6fps": "F0097–F0111",
+          "frames60fps": "961-1110",
+          "frameCount60fps": 150,
+          "timeRange": "00:16.0 – 00:18.5",
+          "durationSec": 2.5,
+          "summary": "Kotak merah di animatic adalah guide transisi sudut kamera dari bottom view ke top view. Titik biru adalah cluster fragmentasi J berekor komet (comet trail). Fokus kamera pada cluster baris ke-2 dari bottom..."
+        },
+        {
+          "id": "SQ02-SH02",
+          "no": 6,
+          "code": "SH02",
+          "fullCode": "SQ02 — SH02",
+          "frames6fps": "F0112–F0141",
+          "frames60fps": "1111-1410",
+          "frameCount60fps": 300,
+          "timeRange": "00:18.5 – 00:23.5",
+          "durationSec": 5.0,
+          "summary": "Fokus ke fragmen spesifik Sola & Sora (ber-comet trail) yang menabrak batu lain hingga Sora terlepas. Sola meluncurkan jaring oranye (persis animatic) namun gagal menggapai, lalu memisahkan diri mengejar..."
+        },
+        {
+          "id": "SQ02-SH03",
+          "no": 7,
+          "code": "SH03",
+          "fullCode": "SQ02 — SH03",
+          "frames6fps": "F0142–F0159",
+          "frames60fps": "1411-1590",
+          "frameCount60fps": 180,
+          "timeRange": "00:23.5 – 00:26.5",
+          "durationSec": 3.0,
+          "summary": "Tampilkan perpisahan trajektori antara Sola & Sora terhadap fragmen utama. Rasio jarak dan kecepatan mengikuti animatic secara persis, disertai comet trail di belakang subjek untuk estetika."
+        }
+      ]
+    },
+    {
+      "id": "SQ03",
+      "folderName": "SQ003_Wormhole_Entry",
+      "title": "Wormhole Entry",
+      "timeRange": "00:26.5 – 00:36.8",
+      "durationSec": 10.3,
+      "totalFrames": 620,
+      "shots": [
+        {
+          "id": "SQ03-SH01",
+          "no": 8,
+          "code": "SH01",
+          "fullCode": "SQ03 — SH01",
+          "frames6fps": "F0160–F0188",
+          "frames60fps": "1591-1880",
+          "frameCount60fps": 290,
+          "timeRange": "00:26.5 – 00:31.3",
+          "durationSec": 4.8,
+          "summary": "Close-up Sola & Sora melaju masuk tarikan gravitasi wormhole (blob merah di animatic = placeholder; wormhole berupa white dot & distorsi sekitar). Pertahankan trail, efek plasma tipis di depan, serta serpihan..."
+        },
+        {
+          "id": "SQ03-SH02",
+          "no": 9,
+          "code": "SH02",
+          "fullCode": "SQ03 — SH02",
+          "frames6fps": "F0189–F0212",
+          "frames60fps": "1881-2120",
+          "frameCount60fps": 240,
+          "timeRange": "00:31.3 – 00:35.3",
+          "durationSec": 4.0,
+          "summary": "Layar hitam di animatic disederhanakan; wujudkan sebagai distorsi tunnel wormhole space sci-fi (referensi utama: adegan masuk wormhole di game Species Unknown) dengan Sola-Sora di dalamnya, lalu ditutup flash..."
+        },
+        {
+          "id": "SQ03-SH03",
+          "no": 10,
+          "code": "SH03",
+          "fullCode": "SQ03 — SH03",
+          "frames6fps": "F0213–F0221",
+          "frames60fps": "2121-2210",
+          "frameCount60fps": 90,
+          "timeRange": "00:35.3 – 00:36.8",
+          "durationSec": 1.5,
+          "summary": "Sola & Sora sudah berwujud humanoid (tanpa adegan transformasi) melaju di dalam tabung Cosmic Tunnel. Tekankan perjalanan di tabung lewat gerak kontinu garis lengkung & cincin/lingkaran dinding tabung serta..."
+        }
+      ]
+    },
+    {
+      "id": "SQ04",
+      "folderName": "SQ004_Cosmic_Cloud",
+      "title": "Cosmic Cloud",
+      "timeRange": "00:36.8 – 00:54.5",
+      "durationSec": 17.7,
+      "totalFrames": 1060,
+      "shots": [
+        {
+          "id": "SQ04-SH01",
+          "no": 11,
+          "code": "SH01",
+          "fullCode": "SQ04 — SH01",
+          "frames6fps": "F0222–F0270",
+          "frames60fps": "2211-2700",
+          "frameCount60fps": 490,
+          "timeRange": "00:36.8 – 00:45.0",
+          "durationSec": 8.2,
+          "summary": "Sola terbangun di tabung Cosmic Tunnel (tekankan gerak garis lengkung & lingkaran tabung + passing particle cepat ala kartun/anime berlari). Di latar belakang, gelombang kosmik meregang hingga linear lalu..."
+        },
+        {
+          "id": "SQ04-SH02",
+          "no": 12,
+          "code": "SH02",
+          "fullCode": "SQ04 — SH02",
+          "frames6fps": "F0271–F0277",
+          "frames60fps": "2701-2770",
+          "frameCount60fps": 70,
+          "timeRange": "00:45.0 – 00:46.2",
+          "durationSec": 1.2,
+          "summary": "Sola memandang ke depan sambil terus melaju di dalam tabung Cosmic Tunnel (lingkaran di animatic = dinding tabung). Wajib tekankan pergerakan kontinu garis lengkung & lingkaran tabung serta passing..."
+        },
+        {
+          "id": "SQ04-SH03",
+          "no": 13,
+          "code": "SH03",
+          "fullCode": "SQ04 — SH03",
+          "frames6fps": "F0278–F0287",
+          "frames60fps": "2771-2870",
+          "frameCount60fps": 100,
+          "timeRange": "00:46.2 – 00:47.8",
+          "durationSec": 1.7,
+          "summary": "Tabung Cosmic Tunnel bertabrakan dengan trajektori Cosmic Cloud; Sola memberi pelindung ke Sora sebelum masuk awan. Tekankan perjalanan di tabung lewat gerak garis lengkung & lingkaran dinding tabung plus..."
+        },
+        {
+          "id": "SQ04-SH04",
+          "no": 14,
+          "code": "SH04",
+          "fullCode": "SQ04 — SH04",
+          "frames6fps": "F0288–F0297",
+          "frames60fps": "2871-2970",
+          "frameCount60fps": 100,
+          "timeRange": "00:47.8 – 00:49.5",
+          "durationSec": 1.7,
+          "summary": "Momen menabrak Cosmic Cloud: visualkan seperti awan badai berkilat penuh micro particle dengan shedding partikel kuning dari Sola akibat terkikis partikel. Pertahankan rasa laju di tabung (garis lengkung &..."
+        },
+        {
+          "id": "SQ04-SH05",
+          "no": 15,
+          "code": "SH05",
+          "fullCode": "SQ04 — SH05",
+          "frames6fps": "F0298–F0327",
+          "frames60fps": "2971-3270",
+          "frameCount60fps": 300,
+          "timeRange": "00:49.5 – 00:54.5",
+          "durationSec": 5.0,
+          "summary": "Masih di dalam Cosmic Cloud -> menjelang keluar, Sora menghilang tertutup awan; saat keluar terlihat Sora berada di cabang berbeda dan masuk ke wormhole Cosmic Tunnel, diikuti Sola. Tekankan gerak garis..."
+        }
+      ]
+    },
+    {
+      "id": "SQ05",
+      "folderName": "SQ005_Reverse_Starfall",
+      "title": "Reverse Starfall",
+      "timeRange": "00:54.5 – 01:00.2",
+      "durationSec": 5.7,
+      "totalFrames": 340,
+      "shots": [
+        {
+          "id": "SQ05-SH01",
+          "no": 16,
+          "code": "SH01",
+          "fullCode": "SQ05 — SH01",
+          "frames6fps": "F0328–F0345",
+          "frames60fps": "3271-3450",
+          "frameCount60fps": 180,
+          "timeRange": "00:54.5 – 00:57.5",
+          "durationSec": 3.0,
+          "summary": "Transisi wormhole keluar dari region sebelumnya memasuki Reverse Starfall Region—tegaskan arah starfall meluncur dari bawah ke atas layar (sketch 12 fps)."
+        },
+        {
+          "id": "SQ05-SH02",
+          "no": 17,
+          "code": "SH02",
+          "fullCode": "SQ05 — SH02",
+          "frames6fps": "F0346–F0353",
+          "frames60fps": "3451-3530",
+          "frameCount60fps": 80,
+          "timeRange": "00:57.5 – 00:58.8",
+          "durationSec": 1.3,
+          "summary": "Sola dalam wujud konsisten V2 terpesona melihat pemandangan Reverse Starfall; objek-objek yang meluncur melintas dari bawah adalah meteorit."
+        },
+        {
+          "id": "SQ05-SH03",
+          "no": 18,
+          "code": "SH03",
+          "fullCode": "SQ05 — SH03",
+          "frames6fps": "F0354–F0361",
+          "frames60fps": "3531-3610",
+          "frameCount60fps": 80,
+          "timeRange": "00:58.8 – 01:00.2",
+          "durationSec": 1.3,
+          "summary": "POV berbeda namun tetap tampilkan hujan Reverse Starfall dari bawah beserta meteorit yang melintas super dekat di depan Sola sebelum ia masuk ke portal berikutnya."
+        }
+      ]
+    },
+    {
+      "id": "SQ06",
+      "folderName": "SQ006_Branching_Tunnels",
+      "title": "Branching Tunnels",
+      "timeRange": "01:00.2 – 01:14.8",
+      "durationSec": 14.7,
+      "totalFrames": 880,
+      "shots": [
+        {
+          "id": "SQ06-SH01",
+          "no": 19,
+          "code": "SH01",
+          "fullCode": "SQ06 — SH01",
+          "frames6fps": "F0362–F0379",
+          "frames60fps": "3611-3790",
+          "frameCount60fps": 180,
+          "timeRange": "01:00.2 – 01:03.2",
+          "durationSec": 3.0,
+          "summary": "Transisi masuk ke Cosmic Tunnel Region berdensitas sangat padat dengan banyak percabangan. Tekankan perjalanan di dalam tabung melalui pergerakan aktif garis lengkung & cincin/lingkaran dinding bercabang..."
+        },
+        {
+          "id": "SQ06-SH02",
+          "no": 20,
+          "code": "SH02",
+          "fullCode": "SQ06 — SH02",
+          "frames6fps": "F0380–F0388",
+          "frames60fps": "3791-3880",
+          "frameCount60fps": 90,
+          "timeRange": "01:03.2 – 01:04.7",
+          "durationSec": 1.5,
+          "summary": "Sola meluncur di dalam tabung Cosmic Tunnel sambil mengagumi pemandangan (ekspresi takjub, bukan panik). Tekankan pergerakan kontinu garis lengkung & lingkaran tabung di sekelilingnya serta passing..."
+        },
+        {
+          "id": "SQ06-SH03",
+          "no": 21,
+          "code": "SH03",
+          "fullCode": "SQ06 — SH03",
+          "frames6fps": "F0389–F0402",
+          "frames60fps": "3881-4020",
+          "frameCount60fps": 140,
+          "timeRange": "01:04.7 – 01:07.0",
+          "durationSec": 2.3,
+          "summary": "Sola masih di dalam tabung Cosmic Tunnel mengagumi pemandangan, lalu melihat Sora muncul di atasnya. Pertahankan gerak garis lengkung & lingkaran dinding tabung serta passing particle/speed lines cepat ala..."
+        },
+        {
+          "id": "SQ06-SH04",
+          "no": 22,
+          "code": "SH04",
+          "fullCode": "SQ06 — SH04",
+          "frames6fps": "F0403–F0449",
+          "frames60fps": "4021-4490",
+          "frameCount60fps": 470,
+          "timeRange": "01:07.0 – 01:14.8",
+          "durationSec": 7.8,
+          "summary": "Sola fokus mengejar Sora yang berada di cabang berbeda hingga Sora masuk portal; Sola menyusul masuk portal namun tiba di Void Region. Sepanjang koridor, tekankan gerak garis lengkung & lingkaran tabung..."
+        }
+      ]
+    },
+    {
+      "id": "SQ07",
+      "folderName": "SQ007_Void_Variants",
+      "title": "Void Variants",
+      "timeRange": "01:14.8 – 01:30.5",
+      "durationSec": 15.7,
+      "totalFrames": 940,
+      "shots": [
+        {
+          "id": "SQ07-SH01",
+          "no": 23,
+          "code": "SH01",
+          "fullCode": "SQ07 — SH01",
+          "frames6fps": "F0450–F0459",
+          "frames60fps": "4491-4590",
+          "frameCount60fps": 100,
+          "timeRange": "01:14.8 – 01:16.5",
+          "durationSec": 1.7,
+          "summary": "Di Void Region, Sola bertemu versi lain dirinya. Versi lain tersebut wajib mengenakan kostum Sora bernomor 12 (bukan nomor 11), dalam proporsi V2 sketch line-work 12 fps."
+        },
+        {
+          "id": "SQ07-SH02",
+          "no": 24,
+          "code": "SH02",
+          "fullCode": "SQ07 — SH02",
+          "frames6fps": "F0460–F0467",
+          "frames60fps": "4591-4670",
+          "frameCount60fps": 80,
+          "timeRange": "01:16.5 – 01:17.8",
+          "durationSec": 1.3,
+          "summary": "Sola mengalihkan pandangan ke bawah untuk melihat versi lain dirinya di Void Region; animasikan gerakan mata & kepala menunduk halus di 12 fps."
+        },
+        {
+          "id": "SQ07-SH03",
+          "no": 25,
+          "code": "SH03",
+          "fullCode": "SQ07 — SH03",
+          "frames6fps": "F0468–F0473",
+          "frames60fps": "4671-4730",
+          "frameCount60fps": 60,
+          "timeRange": "01:17.8 – 01:18.8",
+          "durationSec": 1.0,
+          "summary": "Objek di tengah frame adalah Sola versi kristal (wujud asli Topaz sebelum bertransformasi menjadi humanoid); tampilkan sebagai kristal geometris yang berkilau halus."
+        },
+        {
+          "id": "SQ07-SH04",
+          "no": 26,
+          "code": "SH04",
+          "fullCode": "SQ07 — SH04",
+          "frames6fps": "F0474–F0483",
+          "frames60fps": "4731-4830",
+          "frameCount60fps": 100,
+          "timeRange": "01:18.8 – 01:20.5",
+          "durationSec": 1.7,
+          "summary": "Sola kembali menoleh ke samping melihat versi dirinya yang lain (memakai baju Sora bernomor 12) dengan animasi 12 fps yang konsisten."
+        },
+        {
+          "id": "SQ07-SH05",
+          "no": 27,
+          "code": "SH05",
+          "fullCode": "SQ07 — SH05",
+          "frames6fps": "F0484–F0493",
+          "frames60fps": "4831-4930",
+          "frameCount60fps": 100,
+          "timeRange": "01:20.5 – 01:22.2",
+          "durationSec": 1.7,
+          "summary": "Shot balasan: versi lain Sola ikut memiringkan kepala karena sama-sama bingung dan penasaran; lengkapi gerak miring kepala & rambut halus di 12 fps."
+        },
+        {
+          "id": "SQ07-SH06",
+          "no": 28,
+          "code": "SH06",
+          "fullCode": "SQ07 — SH06",
+          "frames6fps": "F0494–F0505",
+          "frames60fps": "4931-5050",
+          "frameCount60fps": 120,
+          "timeRange": "01:22.2 – 01:24.2",
+          "durationSec": 2.0,
+          "summary": "Sola mendongak melihat ke atas ke arah kemunculan versi dirinya yang lain; animasikan pergerakan kepala & tatapan ke atas secara jelas di 12 fps."
+        },
+        {
+          "id": "SQ07-SH07",
+          "no": 29,
+          "code": "SH07",
+          "fullCode": "SQ07 — SH07",
+          "frames6fps": "F0506–F0514",
+          "frames60fps": "5051-5140",
+          "frameCount60fps": 90,
+          "timeRange": "01:24.2 – 01:25.7",
+          "durationSec": 1.5,
+          "summary": "Tampilkan Sola versi masa depan dalam posisi melayang terbalik; wajib memakai baju kuning versi masa depan sesuai ilustrasi (bukan baju lab)."
+        },
+        {
+          "id": "SQ07-SH08",
+          "no": 30,
+          "code": "SH08",
+          "fullCode": "SQ07 — SH08",
+          "frames6fps": "F0515–F0543",
+          "frames60fps": "5141-5430",
+          "frameCount60fps": 290,
+          "timeRange": "01:25.7 – 01:30.5",
+          "durationSec": 4.8,
+          "summary": "Sola menoleh ke samping dan melihat deretan banyak versi lain dirinya memenuhi Void Region; ganti siluet oval polos di animatic menjadi figur-figur Sola yang jelas di 12 fps."
+        }
+      ]
+    },
+    {
+      "id": "SQ08",
+      "folderName": "SQ008_Void_Light",
+      "title": "Void Light",
+      "timeRange": "01:30.5 – 01:48.0",
+      "durationSec": 17.5,
+      "totalFrames": 1050,
+      "shots": [
+        {
+          "id": "SQ08-SH01",
+          "no": 31,
+          "code": "SH01",
+          "fullCode": "SQ08 — SH01",
+          "frames6fps": "F0544–F0554",
+          "frames60fps": "5431-5540",
+          "frameCount60fps": 110,
+          "timeRange": "01:30.5 – 01:32.3",
+          "durationSec": 1.8,
+          "summary": "[Review PL kosong — keputusan sementara]: Ikuti animatic: zoom-out cepat dan mulus di 12 fps memperlihatkan barisan kisi puluhan hingga ratusan versi Sola di Void/Time Region. Tanya blocking: apakah kisi..."
+        },
+        {
+          "id": "SQ08-SH02",
+          "no": 32,
+          "code": "SH02",
+          "fullCode": "SQ08 — SH02",
+          "frames6fps": "F0555–F0563",
+          "frames60fps": "5541-5630",
+          "frameCount60fps": 90,
+          "timeRange": "01:32.3 – 01:33.8",
+          "durationSec": 1.5,
+          "summary": "[Review PL kosong — keputusan sementara]: Lanjutkan kurva zoom-out dari SH01 hingga lautan versi Sola tampak sebagai ribuan titik mikroskopis memenuhi frame sebelum cut ke cahaya. Tanya blocking: seberapa..."
+        },
+        {
+          "id": "SQ08-SH03",
+          "no": 33,
+          "code": "SH03",
+          "fullCode": "SQ08 — SH03",
+          "frames6fps": "F0564–F0576",
+          "frames60fps": "5631-5760",
+          "frameCount60fps": 130,
+          "timeRange": "01:33.8 – 01:36.0",
+          "durationSec": 2.2,
+          "summary": "Di kejauhan depan mulai muncul titik cahaya yang melebar menjadi garis terang; animasikan pendaran cahaya secara halus di 12 fps."
+        },
+        {
+          "id": "SQ08-SH04",
+          "no": 34,
+          "code": "SH04",
+          "fullCode": "SQ08 — SH04",
+          "frames6fps": "F0577–F0584",
+          "frames60fps": "5761-5840",
+          "frameCount60fps": 80,
+          "timeRange": "01:36.0 – 01:37.3",
+          "durationSec": 1.3,
+          "summary": "Garis-garis di latar adalah efek volumetrik cahaya (bukan lorong tabung). Sola mendongak melihat ke atas ke arah versi dirinya yang lain sementara cahaya kian kuat."
+        },
+        {
+          "id": "SQ08-SH05",
+          "no": 35,
+          "code": "SH05",
+          "fullCode": "SQ08 — SH05",
+          "frames6fps": "F0585–F0596",
+          "frames60fps": "5841-5960",
+          "frameCount60fps": 120,
+          "timeRange": "01:37.3 – 01:39.3",
+          "durationSec": 2.0,
+          "summary": "Sosok pada shot ini adalah Sola versi piyama; mulai mengalami red-tinted fading (memudar berwarna merah seperti efek mendekat/masuk ke black hole)."
+        },
+        {
+          "id": "SQ08-SH06",
+          "no": 36,
+          "code": "SH06",
+          "fullCode": "SQ08 — SH06",
+          "frames6fps": "F0597–F0604",
+          "frames60fps": "5961-6040",
+          "frameCount60fps": 80,
+          "timeRange": "01:39.3 – 01:40.7",
+          "durationSec": 1.3,
+          "summary": "Sola menoleh ke samping ke arah cahaya dengan gerak kepala & rambut halus 12 fps di tengah sinar volumetrik."
+        },
+        {
+          "id": "SQ08-SH07",
+          "no": 37,
+          "code": "SH07",
+          "fullCode": "SQ08 — SH07",
+          "frames6fps": "F0605–F0616",
+          "frames60fps": "6041-6160",
+          "frameCount60fps": 120,
+          "timeRange": "01:40.7 – 01:42.7",
+          "durationSec": 2.0,
+          "summary": "Sosok ini adalah Sola versi underwear saja (pakaian dalam bawah setelah melepas lab shirt pada file 3D Sola-Sora-V2), dan juga mengalami efek red fading."
+        },
+        {
+          "id": "SQ08-SH08",
+          "no": 38,
+          "code": "SH08",
+          "fullCode": "SQ08 — SH08",
+          "frames6fps": "F0617–F0624",
+          "frames60fps": "6161-6240",
+          "frameCount60fps": 80,
+          "timeRange": "01:42.7 – 01:44.0",
+          "durationSec": 1.3,
+          "summary": "Sola kembali mengarahkan pandangan penuh ke sumber cahaya; animasikan gerakan menoleh dan terpaan cahaya yang makin menyilaukan."
+        },
+        {
+          "id": "SQ08-SH09",
+          "no": 39,
+          "code": "SH09",
+          "fullCode": "SQ08 — SH09",
+          "frames6fps": "F0625–F0634",
+          "frames60fps": "6241-6340",
+          "frameCount60fps": 100,
+          "timeRange": "01:44.0 – 01:45.7",
+          "durationSec": 1.7,
+          "summary": "Kamera di belakang Sola (proporsi V2 konsisten) saat cahaya bintang di depan semakin terang; tambah gerak maju halus menuju cahaya."
+        },
+        {
+          "id": "SQ08-SH10",
+          "no": 40,
+          "code": "SH10",
+          "fullCode": "SQ08 — SH10",
+          "frames6fps": "F0635–F0648",
+          "frames60fps": "6341-6480",
+          "frameCount60fps": 140,
+          "timeRange": "01:45.7 – 01:48.0",
+          "durationSec": 2.3,
+          "summary": "Cahaya memuncak semakin terang menelan siluet-siluet sekitar lalu berujung white blank (layar putih penuh) sebagai transisi keluar dari Void Region."
+        }
+      ]
+    },
+    {
+      "id": "SQ09",
+      "folderName": "SQ009_Galaxy_Reveal",
+      "title": "Galaxy Reveal",
+      "timeRange": "01:48.0 – 02:01.0",
+      "durationSec": 13.0,
+      "totalFrames": 780,
+      "shots": [
+        {
+          "id": "SQ09-SH01",
+          "no": 41,
+          "code": "SH01",
+          "fullCode": "SQ09 — SH01",
+          "frames6fps": "F0649–F0687",
+          "frames60fps": "6481-6870",
+          "frameCount60fps": 390,
+          "timeRange": "01:48.0 – 01:54.5",
+          "durationSec": 6.5,
+          "summary": "Diawali black blank yang fade-out bersamaan dengan Sola membuka mata (durasi buka mata samakan dengan animatic), lalu kamera berputar menampakkan pesona angkasa di sisi datar galaksi."
+        },
+        {
+          "id": "SQ09-SH02",
+          "no": 42,
+          "code": "SH02",
+          "fullCode": "SQ09 — SH02",
+          "frames6fps": "F0688–F0704",
+          "frames60fps": "6871-7040",
+          "frameCount60fps": 170,
+          "timeRange": "01:54.5 – 01:57.3",
+          "durationSec": 2.8,
+          "summary": "Sola memandang takjub galaksi dengan desain V2 12 fps; murni sketch line-work tanpa efek refleksi kompleks atau rendering berat (fokus ke kejelasan informasi & ekspresi)."
+        },
+        {
+          "id": "SQ09-SH03",
+          "no": 43,
+          "code": "SH03",
+          "fullCode": "SQ09 — SH03",
+          "frames6fps": "F0705–F0712",
+          "frames60fps": "7041-7120",
+          "frameCount60fps": 80,
+          "timeRange": "01:57.3 – 01:58.7",
+          "durationSec": 1.3,
+          "summary": "Sola penasaran dan mengangkat tangan hendak menggapai ke arah galaksi; animasikan uluran lengan & jari dengan gerak natural 12 fps."
+        },
+        {
+          "id": "SQ09-SH04",
+          "no": 44,
+          "code": "SH04",
+          "fullCode": "SQ09 — SH04",
+          "frames6fps": "F0713–F0726",
+          "frames60fps": "7121-7260",
+          "frameCount60fps": 140,
+          "timeRange": "01:58.7 – 02:01.0",
+          "durationSec": 2.3,
+          "summary": "Over-the-shoulder Sola memandang cakram datar galaksi; orientasi & kemiringan galaksi dikunci konsisten dengan SQ12 dan SQ14."
+        }
+      ]
+    },
+    {
+      "id": "SQ10",
+      "folderName": "SQ010_Twin_Sparkle",
+      "title": "Twin Sparkle",
+      "timeRange": "02:01.0 – 02:13.7",
+      "durationSec": 12.7,
+      "totalFrames": 760,
+      "shots": [
+        {
+          "id": "SQ10-SH01",
+          "no": 45,
+          "code": "SH01",
+          "fullCode": "SQ10 — SH01",
+          "frames6fps": "F0727–F0741",
+          "frames60fps": "7261-7410",
+          "frameCount60fps": 150,
+          "timeRange": "02:01.0 – 02:03.5",
+          "durationSec": 2.5,
+          "summary": "[Review PL kosong — keputusan sementara]: Sora (bergaris biru, desain V2) meringkuk terpejam lalu perlahan membuka matanya dalam gerak halus 12 fps. Tanya blocking: dari arah mana kamera melihat Sora yang..."
+        },
+        {
+          "id": "SQ10-SH02",
+          "no": 46,
+          "code": "SH02",
+          "fullCode": "SQ10 — SH02",
+          "frames6fps": "F0742–F0752",
+          "frames60fps": "7411-7520",
+          "frameCount60fps": 110,
+          "timeRange": "02:03.5 – 02:05.3",
+          "durationSec": 1.8,
+          "summary": "Percikan bintang biru muncul mengikuti ketukan musik persis sesuai animatic; Sola menoleh mengarahkan pandangan ke titik cahaya biru tersebut."
+        },
+        {
+          "id": "SQ10-SH03",
+          "no": 47,
+          "code": "SH03",
+          "fullCode": "SQ10 — SH03",
+          "frames6fps": "F0753–F0772",
+          "frames60fps": "7521-7720",
+          "frameCount60fps": 200,
+          "timeRange": "02:05.3 – 02:08.7",
+          "durationSec": 3.3,
+          "summary": "Medium shot Sola saat menyadari cahaya biru itu adalah Sora—tampilkan ekspresi kaget lembut yang tulus dengan geser kamera pelan 12 fps."
+        },
+        {
+          "id": "SQ10-SH04",
+          "no": 48,
+          "code": "SH04",
+          "fullCode": "SQ10 — SH04",
+          "frames6fps": "F0773–F0788",
+          "frames60fps": "7721-7880",
+          "frameCount60fps": 160,
+          "timeRange": "02:08.7 – 02:11.3",
+          "durationSec": 2.7,
+          "summary": "Medium shot Sora (desain V2) saat menyadari cahaya kuning Sola—tampilkan ekspresi kaget lembut yang serasi dengan gerak kamera pelan."
+        },
+        {
+          "id": "SQ10-SH05",
+          "no": 49,
+          "code": "SH05",
+          "fullCode": "SQ10 — SH05",
+          "frames6fps": "F0789–F0802",
+          "frames60fps": "7881-8020",
+          "frameCount60fps": 140,
+          "timeRange": "02:11.3 – 02:13.7",
+          "durationSec": 2.3,
+          "summary": "Extreme wide shot galaksi megah (orientasi konsisten SQ09/SQ12/SQ14) dengan posisi dua bintang (Sola kuning & Sora biru) berada di kiri-kanan seberang galaksi."
+        }
+      ]
+    },
+    {
+      "id": "SQ11",
+      "folderName": "SQ011_Sola_Chooses",
+      "title": "Sola Chooses",
+      "timeRange": "02:13.7 – 02:20.7",
+      "durationSec": 7.0,
+      "totalFrames": 420,
+      "shots": [
+        {
+          "id": "SQ11-SH01",
+          "no": 50,
+          "code": "SH01",
+          "fullCode": "SQ11 — SH01",
+          "frames6fps": "F0803–F0808",
+          "frames60fps": "8021-8080",
+          "frameCount60fps": 60,
+          "timeRange": "02:13.7 – 02:14.7",
+          "durationSec": 1.0,
+          "summary": "Sola menimbang pilihan (desain V2 konsisten); jeda batin cukup mengikuti timing animatic karena adegan ini berulang lagi setelah insert memandang galaksi."
+        },
+        {
+          "id": "SQ11-SH02",
+          "no": 51,
+          "code": "SH02",
+          "fullCode": "SQ11 — SH02",
+          "frames6fps": "F0809–F0815",
+          "frames60fps": "8081-8150",
+          "frameCount60fps": 70,
+          "timeRange": "02:14.7 – 02:15.8",
+          "durationSec": 1.2,
+          "summary": "Insert Sola memandang bentangan galaksi sebagai opsi tujuan; tampilkan dalam sketch line-work 12 fps dengan gerak dorong kamera sangat halus."
+        },
+        {
+          "id": "SQ11-SH03",
+          "no": 52,
+          "code": "SH03",
+          "fullCode": "SQ11 — SH03",
+          "frames6fps": "F0816–F0826",
+          "frames60fps": "8151-8260",
+          "frameCount60fps": 110,
+          "timeRange": "02:15.8 – 02:17.7",
+          "durationSec": 1.8,
+          "summary": "Close-up Sola (desain V2) membulatkan tekad memilih menyusul Sora; belum ada perubahan ke wujud cahaya pada shot ini."
+        },
+        {
+          "id": "SQ11-SH04",
+          "no": 53,
+          "code": "SH04",
+          "fullCode": "SQ11 — SH04",
+          "frames6fps": "F0827–F0844",
+          "frames60fps": "8261-8440",
+          "frameCount60fps": 180,
+          "timeRange": "02:17.7 – 02:20.7",
+          "durationSec": 3.0,
+          "summary": "Sola mengambil ancang-ancang lalu secara instan berubah menjadi berkas cahaya dan melesat menuju bintang biru Sora di kejauhan."
+        }
+      ]
+    },
+    {
+      "id": "SQ12",
+      "folderName": "SQ012_Black_Hole_Transit",
+      "title": "Black Hole Transit",
+      "timeRange": "02:20.7 – 02:37.8",
+      "durationSec": 17.2,
+      "totalFrames": 1030,
+      "shots": [
+        {
+          "id": "SQ12-SH01",
+          "no": 54,
+          "code": "SH01",
+          "fullCode": "SQ12 — SH01",
+          "frames6fps": "F0845–F0869",
+          "frames60fps": "8441-8690",
+          "frameCount60fps": 250,
+          "timeRange": "02:20.7 – 02:24.8",
+          "durationSec": 4.2,
+          "summary": "Sola dalam wujud berkas cahaya kuning meluncur melintasi ruang vakum di sisi kiri galaksi dengan kecepatan konstan di setiap frame 12 fps."
+        },
+        {
+          "id": "SQ12-SH02",
+          "no": 55,
+          "code": "SH02",
+          "fullCode": "SQ12 — SH02",
+          "frames6fps": "F0870–F0880",
+          "frames60fps": "8691-8800",
+          "frameCount60fps": 110,
+          "timeRange": "02:24.8 – 02:26.7",
+          "durationSec": 1.8,
+          "summary": "Shot tambahan dipertahankan: close-up Sora (desain V2) dengan ekspresi kaget ringan dan bingung menatap ke arah datangnya cahaya Sola."
+        },
+        {
+          "id": "SQ12-SH03",
+          "no": 56,
+          "code": "SH03",
+          "fullCode": "SQ12 — SH03",
+          "frames6fps": "F0881–F0893",
+          "frames60fps": "8801-8930",
+          "frameCount60fps": 130,
+          "timeRange": "02:26.7 – 02:28.8",
+          "durationSec": 2.2,
+          "summary": "Sola melakukan fly-by cepat di atas black hole (piringan merah yang membesar terkonfirmasi sebagai black hole) dengan lengkung lintasan halus 12 fps."
+        },
+        {
+          "id": "SQ12-SH04",
+          "no": 57,
+          "code": "SH04",
+          "fullCode": "SQ12 — SH04",
+          "frames6fps": "F0894–F0919",
+          "frames60fps": "8931-9190",
+          "frameCount60fps": 260,
+          "timeRange": "02:28.8 – 02:33.2",
+          "durationSec": 4.3,
+          "summary": "Trajektori Sola tertarik gravitasi black hole; kecepatannya menurun sehingga ia berubah kembali ke wujud humanoid untuk mengoreksi arah, lalu kembali melesat ke arah Sora."
+        },
+        {
+          "id": "SQ12-SH05",
+          "no": 58,
+          "code": "SH05",
+          "fullCode": "SQ12 — SH05",
+          "frames6fps": "F0920–F0947",
+          "frames60fps": "9191-9470",
+          "frameCount60fps": 280,
+          "timeRange": "02:33.2 – 02:37.8",
+          "durationSec": 4.7,
+          "summary": "Sola melaju dari kiri ke kanan; ia tidak menembus galaksi melainkan melewati interseksi cahaya inti galaksi dan berpijar seperti power-up yang meningkatkan kecepatan travel-nya secara signifikan."
+        }
+      ]
+    },
+    {
+      "id": "SQ13",
+      "folderName": "SQ013_Reunion",
+      "title": "Reunion",
+      "timeRange": "02:37.8 – 02:54.2",
+      "durationSec": 16.3,
+      "totalFrames": 980,
+      "shots": [
+        {
+          "id": "SQ13-SH01",
+          "no": 59,
+          "code": "SH01",
+          "fullCode": "SQ13 — SH01",
+          "frames6fps": "F0948–F0951",
+          "frames60fps": "9471-9510",
+          "frameCount60fps": 40,
+          "timeRange": "02:37.8 – 02:38.5",
+          "durationSec": 0.7,
+          "summary": "Durasi zoom-out singkat pada Sora sudah cukup (pertahankan timing animatic); tampilkan ekspresi Sora yang semakin penasaran melihat cahaya mendekat."
+        },
+        {
+          "id": "SQ13-SH02",
+          "no": 60,
+          "code": "SH02",
+          "fullCode": "SQ13 — SH02",
+          "frames6fps": "F0952–F0961",
+          "frames60fps": "9511-9610",
+          "frameCount60fps": 100,
+          "timeRange": "02:38.5 – 02:40.2",
+          "durationSec": 1.7,
+          "summary": "Dari belakang Sora (proporsi V2 konsisten), cahaya Sola yang terang terus mendekat dan membesar dengan kilau intens."
+        },
+        {
+          "id": "SQ13-SH03",
+          "no": 61,
+          "code": "SH03",
+          "fullCode": "SQ13 — SH03",
+          "frames6fps": "F0962–F0995",
+          "frames60fps": "9611-9950",
+          "frameCount60fps": 340,
+          "timeRange": "02:40.2 – 02:45.8",
+          "durationSec": 5.7,
+          "summary": "Dari jauh masih tampak sebagai cahaya bintang yang mendekat, lalu saat close-up menampakkan wujud humanoid Sola yang langsung melakukan instan stop tepat di depan Sora."
+        },
+        {
+          "id": "SQ13-SH04",
+          "no": 62,
+          "code": "SH04",
+          "fullCode": "SQ13 — SH04",
+          "frames6fps": "F0996–F1011",
+          "frames60fps": "9951-10110",
+          "frameCount60fps": 160,
+          "timeRange": "02:45.8 – 02:48.5",
+          "durationSec": 2.7,
+          "summary": "Close-up Sola (desain V2) tersenyum senang menatap Sora setelah akhirnya bertemu kembali; haluskan kedipan mata dan rambut di 12 fps."
+        },
+        {
+          "id": "SQ13-SH05",
+          "no": 63,
+          "code": "SH05",
+          "fullCode": "SQ13 — SH05",
+          "frames6fps": "F1012–F1025",
+          "frames60fps": "10111-10250",
+          "frameCount60fps": 140,
+          "timeRange": "02:48.5 – 02:50.8",
+          "durationSec": 2.3,
+          "summary": "Close-up balasan Sora (desain V2, bukan chibi) masih dengan ekspresi bingung membalas tatapan Sola; pertahankan gerak halus rambut dan mata 12 fps."
+        },
+        {
+          "id": "SQ13-SH06",
+          "no": 64,
+          "code": "SH06",
+          "fullCode": "SQ13 — SH06",
+          "frames6fps": "F1026–F1045",
+          "frames60fps": "10251-10450",
+          "frameCount60fps": 200,
+          "timeRange": "02:50.8 – 02:54.2",
+          "durationSec": 3.3,
+          "summary": "Medium two-shot Sola dan Sora (proporsi V2 konsisten) melayang berdampingan saja (tanpa berpegangan tangan), lalu menoleh bersama ke pemandangan di samping."
+        }
+      ]
+    },
+    {
+      "id": "SQ14",
+      "folderName": "SQ014_Closing",
+      "title": "Closing",
+      "timeRange": "02:54.2 – 02:59.8",
+      "durationSec": 5.7,
+      "totalFrames": 340,
+      "shots": [
+        {
+          "id": "SQ14-SH01",
+          "no": 65,
+          "code": "SH01",
+          "fullCode": "SQ14 — SH01",
+          "frames6fps": "F1046–F1059",
+          "frames60fps": "10451-10590",
+          "frameCount60fps": 140,
+          "timeRange": "02:54.2 – 02:56.5",
+          "durationSec": 2.3,
+          "summary": "Kamera dari belakang Sola & Sora memandang galaksi spiral & nebula biru (konsisten SQ09/SQ12); tegaskan bahwa sosok yang berada dalam orientasi terbalik (upside-down) adalah Sora."
+        },
+        {
+          "id": "SQ14-SH02",
+          "no": 66,
+          "code": "SH02",
+          "fullCode": "SQ14 — SH02",
+          "frames6fps": "F1060–F1079",
+          "frames60fps": "10591-10790",
+          "frameCount60fps": 200,
+          "timeRange": "02:56.5 – 02:59.8",
+          "durationSec": 3.3,
+          "summary": "Extreme wide shot penutup menampilkan galaksi spiral, nebula biru, dan dua kilapan kembar Sola-Sora bersanding kecil, lalu diakhiri instan black (cut langsung ke hitam) di akhir shot."
+        }
+      ]
+    }
+  ],
+  "progress": {
+    "blocking": {
+      "SQ01-SH01": {
+        "status": "done",
+        "version": "v006",
+        "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      },
+      "SQ01-SH02": {
+        "status": "done",
+        "version": "v006",
+        "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      },
+      "SQ01-SH03": {
+        "status": "done",
+        "version": "v006",
+        "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      },
+      "SQ01-SH04": {
+        "status": "done",
+        "version": "v006",
+        "note": "TWINkle_SQ01_SH01_Range_v006.blend + viewport_rendersq01.mp4",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      },
+      "SQ02-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ02-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ02-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ03-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ03-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ03-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ04-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ04-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ04-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ04-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ04-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ05-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ05-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ05-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ06-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ06-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ06-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ06-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH06": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH07": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ07-SH08": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH06": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH07": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH08": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH09": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ08-SH10": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ09-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ09-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ09-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ09-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ10-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ10-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ10-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ10-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ10-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ11-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ11-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ11-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ11-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ12-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ12-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ12-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ12-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ12-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH03": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH04": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH05": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ13-SH06": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ14-SH01": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      },
+      "SQ14-SH02": {
+        "status": "todo",
+        "version": "v001",
+        "note": "Scaffold range file siap diblocking"
+      }
+    },
+    "animation": {},
+    "lookdev": {
+      "SQ01-SH01": {
+        "status": "in_progress",
+        "version": "Light_v017",
+        "note": "Lookdev/lighting test Argon_v003 & Light_v017",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      }
+    },
+    "vfx": {},
+    "lighting": {
+      "SQ01-SH01": {
+        "status": "in_progress",
+        "version": "Light_v017",
+        "note": "Lookdev/lighting test Argon_v003 & Light_v017",
+        "updatedAt": "2026-11-25T13:54:31+00:00"
+      }
+    },
+    "rendering": {},
+    "compositing": {},
+    "delivery": {}
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>TWINkle — Production Progression Tracker</title>
+  <meta name="description" content="Peta progres produksi interaktif film pendek animasi TWINkle (Kilapan Kembar) — 8 Stage, 14 Sequence, 66 Shot." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: "Morneven Veyric Reguler";
+      src: url("./assets/MornevenVeyricReguler-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Morneven Veyric Rounded";
+      src: url("./assets/MornevenVeyricRounded-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+<body>
+  <div class="cosmic-backdrop" aria-hidden="true">
+    <div class="nebula-glow nebula-topaz"></div>
+    <div class="nebula-glow nebula-zircon"></div>
+    <div class="starfield-layer"></div>
+  </div>
+
+  <div class="app-shell">
+    <!-- Top HUD Header -->
+    <header class="hud-header">
+      <div class="brand-cluster">
+        <div class="brand-emblem" aria-hidden="true">
+          <span class="sparkle s-sola">✦</span>
+          <span class="sparkle s-sora">✦</span>
+        </div>
+        <div class="brand-titles">
+          <div class="title-row">
+            <h1 class="project-title" id="project-title">TWIN<span class="title-accent">kle</span></h1>
+            <span class="veyric-tag" id="veyric-subtitle" title="Aksara Veyric: TWINkle — Kilapan Kembar">TWINkle</span>
+          </div>
+          <div class="subbrand-row">
+            <img src="./assets/morneven-logo.png" alt="Morneven" class="morneven-logo" width="18" height="18" />
+            <span>Powered by Morneven</span>
+            <span class="dot-sep" aria-hidden="true">•</span>
+            <span id="meta-specs">14 SQ · 66 Shot · 60 fps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-telemetry" aria-label="Ringkasan Progres Keseluruhan">
+        <div class="overall-pill" id="overall-progress-pill">
+          <span class="pill-label">Campaign Overall</span>
+          <strong class="pill-value" id="overall-percent">0%</strong>
+          <div class="mini-meter" aria-hidden="true">
+            <div class="mini-meter-fill" id="overall-meter-fill"></div>
+          </div>
+          <span class="pill-sub" id="overall-count">0/528 unit</span>
+        </div>
+      </div>
+
+      <div class="hud-actions">
+        <span class="draft-badge" id="draft-badge" hidden>
+          <span class="status-glyph" aria-hidden="true">◆</span>
+          Draf Lokal Aktif
+        </span>
+        <button type="button" class="btn btn-ghost" id="btn-veyric-toggle" aria-pressed="false" title="Ubah judul utama memakai aksara Veyric">
+          <span class="btn-icon" aria-hidden="true">✧</span>
+          <span>Veyric Title</span>
+        </button>
+        <button type="button" class="btn btn-toggle" id="btn-edit-mode" aria-pressed="false">
+          <span class="btn-icon" aria-hidden="true">✎</span>
+          <span>Edit Mode</span>
+        </button>
+        <button type="button" class="btn btn-primary" id="btn-open-sync">
+          <span class="btn-icon" aria-hidden="true">⇅</span>
+          <span>Sync / Export</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 8-Stage Macro Campaign Spine -->
+    <nav class="stage-spine-wrap" aria-label="Tahap Produksi (8 Stage)">
+      <div class="stage-spine scroller" id="stage-spine" role="tablist" aria-label="Pilih Stage Produksi"></div>
+    </nav>
+
+    <!-- Active Stage Summary & Controls Toolbar -->
+    <section class="toolbar-bar" aria-label="Kontrol Peta Konstelasi">
+      <div class="active-stage-brief">
+        <div class="stage-badge-row">
+          <span class="stage-step-pill" id="active-stage-index">STAGE 01</span>
+          <h2 class="active-stage-title" id="active-stage-title">Blocking / Layout</h2>
+          <span class="stage-completion-pill" id="active-stage-stats">0 / 66 Shot (0%)</span>
+        </div>
+        <p class="active-stage-desc" id="active-stage-desc"></p>
+      </div>
+
+      <div class="toolbar-controls">
+        <label class="search-box" aria-label="Cari SQ atau Shot">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" id="search-input" placeholder="Cari SQ01, SH02, Sola..." autocomplete="off" />
+        </label>
+
+        <div class="filter-group" role="group" aria-label="Filter Status">
+          <button type="button" class="filter-chip is-active" data-filter="all">Semua</button>
+          <button type="button" class="filter-chip" data-filter="done"><span aria-hidden="true">★</span> Selesai</button>
+          <button type="button" class="filter-chip" data-filter="review"><span aria-hidden="true">◆</span> Review</button>
+          <button type="button" class="filter-chip" data-filter="in_progress"><span aria-hidden="true">◐</span> Proses</button>
+          <button type="button" class="filter-chip" data-filter="todo"><span aria-hidden="true">○</span> Belum</button>
+        </div>
+
+        <div class="view-switch" role="group" aria-label="Mode Tampilan">
+          <button type="button" class="btn btn-chip is-active" id="btn-view-map" aria-pressed="true">Star Map</button>
+          <button type="button" class="btn btn-chip" id="btn-view-tree" aria-pressed="false">Scene Tree</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Interactive Workspace -->
+    <main class="workspace-main" id="workspace-main">
+      <!-- Interactive Game Constellation Map -->
+      <section class="star-map-section" id="star-map-section" aria-label="Diagram Progres Konstelasi SQ ke Shot">
+        <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="Kanvas Konstelasi Interaktif (drag untuk geser, scroll untuk zoom)">
+          <div class="map-world" id="map-world">
+            <svg class="map-conduits" id="map-conduits" aria-hidden="true"></svg>
+            <div class="map-nodes" id="map-nodes"></div>
+          </div>
+        </div>
+
+        <!-- Floating Canvas HUD Controls -->
+        <div class="map-hud-top-right">
+          <button type="button" class="hud-tool-btn" id="btn-expand-all" title="Buka semua cabang shot SQ">Expand All</button>
+          <button type="button" class="hud-tool-btn" id="btn-collapse-all" title="Tutup semua cabang shot SQ">Collapse All</button>
+        </div>
+
+        <div class="map-hud-bottom-right" role="group" aria-label="Kontrol Zoom Kanvas">
+          <button type="button" class="hud-icon-btn" id="btn-zoom-out" aria-label="Perkecil zoom">−</button>
+          <span class="zoom-readout" id="zoom-readout">100%</span>
+          <button type="button" class="hud-icon-btn" id="btn-zoom-in" aria-label="Perbesar zoom">+</button>
+          <button type="button" class="hud-tool-btn" id="btn-fit-view">Fit View</button>
+        </div>
+
+        <!-- Quick SQ Jump Strip -->
+        <div class="sq-jump-strip scroller" id="sq-jump-strip" aria-label="Lompat cepat ke Sequence"></div>
+      </section>
+
+      <!-- Compact Accessible Tree View -->
+      <section class="tree-view-section scroller" id="tree-view-section" hidden aria-label="Scene Tree Sequence ke Shot"></section>
+    </main>
+
+    <!-- Footer Legend -->
+    <footer class="hud-footer">
+      <div class="legend-items" aria-label="Legenda Status Node">
+        <span class="legend-chip status-done"><span aria-hidden="true">★</span> Completed</span>
+        <span class="legend-chip status-review"><span aria-hidden="true">◆</span> In Review</span>
+        <span class="legend-chip status-in_progress"><span aria-hidden="true">◐</span> In Progress</span>
+        <span class="legend-chip status-todo"><span aria-hidden="true">○</span> Uncharted</span>
+      </div>
+      <div class="footer-hint" id="footer-hint">
+        Drag kanvas untuk menggeser · Scroll untuk zoom · Klik node SQ / Shot untuk detail &amp; progres 8 stage
+      </div>
+    </footer>
+  </div>
+
+  <!-- Node Inspector Native Modal -->
+  <dialog id="inspector-dialog" class="cosmic-dialog" closedby="any" aria-labelledby="inspector-title">
+    <div class="dialog-surface" id="inspector-content"></div>
+  </dialog>
+
+  <!-- Data Sync / Export / Import / GitHub Publish Native Modal -->
+  <dialog id="sync-dialog" class="cosmic-dialog" closedby="any" aria-labelledby="sync-dialog-title">
+    <div class="dialog-surface" id="sync-content"></div>
+  </dialog>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

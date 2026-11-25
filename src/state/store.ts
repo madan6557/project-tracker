@@ -1,0 +1,317 @@
+import type {
+  ProgressEntry,
+  ProgressStatus,
+  ProjectProgressDocument,
+  SequenceDefinition,
+  SequenceStats,
+  StageStats,
+} from '../types';
+
+const DRAFT_STORAGE_KEY = 'twinkle_tracker_draft_v1';
+
+export const STATUS_ORDER: ProgressStatus[] = ['todo', 'in_progress', 'review', 'done'];
+
+export const STATUS_LABELS: Record<ProgressStatus, string> = {
+  todo: 'Uncharted',
+  in_progress: 'In Progress',
+  review: 'In Review',
+  done: 'Completed',
+};
+
+export const STATUS_GLYPHS: Record<ProgressStatus, string> = {
+  todo: '○',
+  in_progress: '◐',
+  review: '◆',
+  done: '★',
+};
+
+type Listener = () => void;
+
+class TrackerStore {
+  private publishedDoc: ProjectProgressDocument | null = null;
+  private doc: ProjectProgressDocument | null = null;
+  private hasDraft = false;
+  private activeStageId = 'blocking';
+  private editMode = false;
+  private veyricTitle = false;
+  private viewMode: 'map' | 'tree' = 'map';
+  private filterStatus: 'all' | ProgressStatus = 'all';
+  private searchQuery = '';
+  private expandedSeqs = new Set<string>(['SQ01', 'SQ02']);
+  private listeners = new Set<Listener>();
+
+  subscribe(fn: Listener): () => void {
+    this.listeners.add(fn);
+    return () => this.listeners.delete(fn);
+  }
+
+  private emit(): void {
+    for (const fn of this.listeners) fn();
+  }
+
+  async init(): Promise<void> {
+    const resp = await fetch('./data/progress.json', { cache: 'no-cache' });
+    if (!resp.ok) {
+      throw new Error(`Gagal memuat data progres (${resp.status})`);
+    }
+    const raw = (await resp.json()) as ProjectProgressDocument;
+    this.publishedDoc = structuredClone(raw);
+    this.doc = structuredClone(raw);
+
+    const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (savedDraft) {
+      try {
+        const draftProgress = JSON.parse(savedDraft) as Record<string, Record<string, ProgressEntry>>;
+        if (draftProgress && typeof draftProgress === 'object') {
+          this.doc.progress = draftProgress;
+          this.hasDraft = true;
+        }
+      } catch {
+        localStorage.removeItem(DRAFT_STORAGE_KEY);
+      }
+    }
+
+    if (this.doc.stages.length > 0 && !this.doc.stages.some((s) => s.id === this.activeStageId)) {
+      this.activeStageId = this.doc.stages[0].id;
+    }
+
+    this.emit();
+  }
+
+  getDoc(): ProjectProgressDocument | null {
+    return this.doc;
+  }
+
+  getHasDraft(): boolean {
+    return this.hasDraft;
+  }
+
+  getActiveStageId(): string {
+    return this.activeStageId;
+  }
+
+  setActiveStage(stageId: string): void {
+    if (this.activeStageId === stageId) return;
+    this.activeStageId = stageId;
+    this.emit();
+  }
+
+  isEditMode(): boolean {
+    return this.editMode;
+  }
+
+  toggleEditMode(): void {
+    this.editMode = !this.editMode;
+    this.emit();
+  }
+
+  isVeyricTitle(): boolean {
+    return this.veyricTitle;
+  }
+
+  toggleVeyricTitle(): void {
+    this.veyricTitle = !this.veyricTitle;
+    this.emit();
+  }
+
+  getViewMode(): 'map' | 'tree' {
+    return this.viewMode;
+  }
+
+  setViewMode(mode: 'map' | 'tree'): void {
+    if (this.viewMode === mode) return;
+    this.viewMode = mode;
+    this.emit();
+  }
+
+  getFilterStatus(): 'all' | ProgressStatus {
+    return this.filterStatus;
+  }
+
+  setFilterStatus(status: 'all' | ProgressStatus): void {
+    this.filterStatus = status;
+    this.emit();
+  }
+
+  getSearchQuery(): string {
+    return this.searchQuery;
+  }
+
+  setSearchQuery(query: string): void {
+    this.searchQuery = query.trim();
+    this.emit();
+  }
+
+  isSeqExpanded(sqId: string): boolean {
+    return this.expandedSeqs.has(sqId);
+  }
+
+  toggleSeqExpanded(sqId: string): void {
+    if (this.expandedSeqs.has(sqId)) {
+      this.expandedSeqs.delete(sqId);
+    } else {
+      this.expandedSeqs.add(sqId);
+    }
+    this.emit();
+  }
+
+  expandAllSeqs(): void {
+    if (!this.doc) return;
+    for (const seq of this.doc.sequences) this.expandedSeqs.add(seq.id);
+    this.emit();
+  }
+
+  collapseAllSeqs(): void {
+    this.expandedSeqs.clear();
+    this.emit();
+  }
+
+  getShotEntry(stageId: string, shotKey: string): ProgressEntry {
+    const entry = this.doc?.progress?.[stageId]?.[shotKey];
+    if (!entry) return { status: 'todo' };
+    return entry;
+  }
+
+  getSequenceStats(stageId: string, seq: SequenceDefinition): SequenceStats {
+    let done = 0;
+    let review = 0;
+    let inProgress = 0;
+    let todo = 0;
+
+    for (const shot of seq.shots) {
+      const status = this.getShotEntry(stageId, shot.id).status;
+      if (status === 'done') done++;
+      else if (status === 'review') review++;
+      else if (status === 'in_progress') inProgress++;
+      else todo++;
+    }
+
+    const total = seq.shots.length;
+    const weighted = done + review * 0.75 + inProgress * 0.4;
+    const percent = total > 0 ? Math.round((weighted / total) * 100) : 0;
+
+    let derivedStatus: ProgressStatus = 'todo';
+    if (done === total && total > 0) derivedStatus = 'done';
+    else if (review > 0 && done + review === total) derivedStatus = 'review';
+    else if (done > 0 || review > 0 || inProgress > 0) derivedStatus = 'in_progress';
+
+    return { total, done, review, inProgress, todo, percent, derivedStatus };
+  }
+
+  getStageStats(stageId: string): StageStats {
+    if (!this.doc) {
+      return { total: 0, done: 0, review: 0, inProgress: 0, todo: 0, percent: 0, weightedPercent: 0 };
+    }
+    let total = 0;
+    let done = 0;
+    let review = 0;
+    let inProgress = 0;
+    let todo = 0;
+
+    for (const seq of this.doc.sequences) {
+      for (const shot of seq.shots) {
+        total++;
+        const st = this.getShotEntry(stageId, shot.id).status;
+        if (st === 'done') done++;
+        else if (st === 'review') review++;
+        else if (st === 'in_progress') inProgress++;
+        else todo++;
+      }
+    }
+
+    const percent = total > 0 ? Math.round((done / total) * 100) : 0;
+    const weightedPercent =
+      total > 0 ? Math.round(((done + review * 0.75 + inProgress * 0.4) / total) * 100) : 0;
+    return { total, done, review, inProgress, todo, percent, weightedPercent };
+  }
+
+  getOverallStats(): { completedUnits: number; totalUnits: number; percent: number } {
+    if (!this.doc) return { completedUnits: 0, totalUnits: 0, percent: 0 };
+    const totalUnits = this.doc.stages.length * this.doc.meta.totalShots;
+    let completedUnits = 0;
+    let weightedUnits = 0;
+    for (const stage of this.doc.stages) {
+      const st = this.getStageStats(stage.id);
+      completedUnits += st.done;
+      weightedUnits += st.done + st.review * 0.75 + st.inProgress * 0.4;
+    }
+    const percent = totalUnits > 0 ? Math.round((weightedUnits / totalUnits) * 100) : 0;
+    return { completedUnits, totalUnits, percent };
+  }
+
+  private persistDraft(): void {
+    if (!this.doc) return;
+    this.doc.meta.updatedAt = new Date().toISOString();
+    localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(this.doc.progress));
+    this.hasDraft = true;
+    this.emit();
+  }
+
+  updateShotEntry(stageId: string, shotKey: string, patch: Partial<ProgressEntry>): void {
+    if (!this.doc) return;
+    if (!this.doc.progress[stageId]) this.doc.progress[stageId] = {};
+    const prev = this.doc.progress[stageId][shotKey] ?? { status: 'todo' };
+    const next: ProgressEntry = {
+      ...prev,
+      ...patch,
+      updatedAt: new Date().toISOString(),
+    };
+    if (!next.version) delete next.version;
+    if (!next.note) delete next.note;
+    this.doc.progress[stageId][shotKey] = next;
+    this.persistDraft();
+  }
+
+  updateSequenceStatus(
+    stageId: string,
+    seq: SequenceDefinition,
+    status: ProgressStatus,
+    version?: string,
+    note?: string,
+  ): void {
+    if (!this.doc) return;
+    if (!this.doc.progress[stageId]) this.doc.progress[stageId] = {};
+    const now = new Date().toISOString();
+    for (const shot of seq.shots) {
+      const prev = this.doc.progress[stageId][shot.id] ?? { status: 'todo' };
+      const next: ProgressEntry = {
+        ...prev,
+        status,
+        updatedAt: now,
+      };
+      if (version !== undefined) {
+        if (version.trim()) next.version = version.trim();
+        else delete next.version;
+      }
+      if (note !== undefined) {
+        if (note.trim()) next.note = note.trim();
+        else delete next.note;
+      }
+      this.doc.progress[stageId][shot.id] = next;
+    }
+    this.persistDraft();
+  }
+
+  resetDraft(): void {
+    if (!this.publishedDoc) return;
+    localStorage.removeItem(DRAFT_STORAGE_KEY);
+    this.doc = structuredClone(this.publishedDoc);
+    this.hasDraft = false;
+    this.emit();
+  }
+
+  exportJsonString(): string {
+    return JSON.stringify(this.doc, null, 2) + '\n';
+  }
+
+  importJsonString(raw: string): void {
+    const parsed = JSON.parse(raw) as ProjectProgressDocument;
+    if (!parsed || !Array.isArray(parsed.stages) || !Array.isArray(parsed.sequences) || !parsed.progress) {
+      throw new Error('Format file progress.json tidak valid.');
+    }
+    this.doc = parsed;
+    this.persistDraft();
+  }
+}
+
+export const store = new TrackerStore();
