@@ -1171,9 +1171,17 @@ dialog.cosmic-dialog::backdrop {
 
 .dialog-surface {
   padding: 18px 20px;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
+}
+
+.dialog-surface > * {
+  flex-shrink: 0;
+  min-width: 0;
 }
 
 .dialog-header {
@@ -1200,11 +1208,13 @@ dialog.cosmic-dialog::backdrop {
 
 .spec-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr));
   gap: 8px;
 }
 
 .spec-box {
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 8px 10px;
   border-radius: var(--radius-sm);
   background: var(--bg-deep);
@@ -1226,11 +1236,12 @@ dialog.cosmic-dialog::backdrop {
 
 .cross-stage-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
   gap: 6px;
 }
 
 .cross-stage-pill {
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1250,14 +1261,26 @@ dialog.cosmic-dialog::backdrop {
 
 /* Lazy-loaded Stage Thumbnails inside Inspector */
 .inspector-thumb-wrap {
-  position: relative;
   margin: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: #040711;
   border: 1px solid var(--border-strong);
+}
+
+.inspector-thumb-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(310px, 40dvh);
+  background: #040711;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .inspector-thumb-img {
@@ -1267,32 +1290,39 @@ dialog.cosmic-dialog::backdrop {
   object-fit: contain;
 }
 
+.inspector-thumb-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #080e20;
+  border-top: 1px solid var(--border-subtle);
+}
+
 .thumb-badge {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  padding: 3px 9px;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
   border-radius: 999px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  background: rgb(5 8 20 / 0.85);
+  background: var(--sora-zircon-soft);
   border: 1px solid var(--sora-zircon);
   color: var(--sora-zircon);
 }
 
 .thumb-badge.is-fallback {
+  background: var(--sola-topaz-soft);
   border-color: var(--sola-topaz);
   color: var(--sola-topaz);
 }
 
 .thumb-compare-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  padding: 4px 9px;
+  padding: 4px 10px;
   font-size: 0.74rem;
-  background: rgb(11 17 36 / 0.9);
 }
 
 .sq-thumb-strip {
@@ -1505,6 +1535,17 @@ dialog.cosmic-dialog::backdrop {
   }
   .hud-header {
     padding: 10px 12px;
+  }
+  .search-box {
+    max-width: none;
+  }
+  dialog.cosmic-dialog {
+    width: calc(100vw - 16px);
+    max-height: 90dvh;
+  }
+  .dialog-surface {
+    padding: 14px;
+    gap: 12px;
   }
   .star-map-section {
     min-height: 440px;

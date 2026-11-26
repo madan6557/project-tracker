@@ -42,19 +42,23 @@ export class InspectorDialog {
 
     const thumbHtml = resolvedThumb
       ? `<figure class="inspector-thumb-wrap">
-           <img
-             src="${escapeHtml(displayedUrl)}"
-             alt="Preview ${escapeHtml(shot.fullCode)} (${escapeHtml(displayedBadge)})"
-             loading="lazy"
-             decoding="async"
-             class="inspector-thumb-img"
-           />
-           <span class="thumb-badge ${!this.showAnimaticRef && resolvedThumb.isFallback ? 'is-fallback' : ''}">${escapeHtml(displayedBadge)}</span>
-           ${
-             canCompareRef
-               ? `<button type="button" class="btn thumb-compare-btn" id="btn-toggle-ref-thumb">${this.showAnimaticRef ? 'Lihat Preview Stage' : 'Lihat Ref Animatic'}</button>`
-               : ''
-           }
+           <div class="inspector-thumb-media">
+             <img
+               src="${escapeHtml(displayedUrl)}"
+               alt="Preview ${escapeHtml(shot.fullCode)} (${escapeHtml(displayedBadge)})"
+               loading="lazy"
+               decoding="async"
+               class="inspector-thumb-img"
+             />
+           </div>
+           <figcaption class="inspector-thumb-bar">
+             <span class="thumb-badge ${!this.showAnimaticRef && resolvedThumb.isFallback ? 'is-fallback' : ''}">${escapeHtml(displayedBadge)}</span>
+             ${
+               canCompareRef
+                 ? `<button type="button" class="btn thumb-compare-btn" id="btn-toggle-ref-thumb">${this.showAnimaticRef ? 'Lihat Preview Stage' : 'Lihat Ref Animatic'}</button>`
+                 : ''
+             }
+           </figcaption>
          </figure>`
       : '';
 
