@@ -2,8 +2,10 @@ import type {
   ProgressEntry,
   ProgressStatus,
   ProjectProgressDocument,
+  ResolvedThumbnail,
   SequenceDefinition,
   SequenceStats,
+  ShotDefinition,
   StageStats,
 } from '../types';
 
@@ -204,6 +206,54 @@ class TrackerStore {
     return entry;
   }
 
+  resolveShotThumbnail(stageId: string, shot: ShotDefinition): ResolvedThumbnail | null {
+    const doc = this.doc;
+    if (!doc) return null;
+    const stageIdx = doc.stages.findIndex((s) => s.id === stageId);
+    const activeStage = stageIdx >= 0 ? doc.stages[stageIdx] : undefined;
+    const entry = this.getShotEntry(stageId, shot.id);
+
+    if (entry.thumbnail) {
+      return {
+        url: entry.thumbnail,
+        badge: `Stage: ${activeStage?.shortName ?? stageId}`,
+        isFallback: false,
+        refUrl: shot.refThumbnail,
+      };
+    }
+
+    if (stageId === 'blocking' && shot.refThumbnail) {
+      return {
+        url: shot.refThumbnail,
+        badge: 'Ref: Animatic',
+        isFallback: false,
+      };
+    }
+
+    for (let i = stageIdx - 1; i >= 0; i--) {
+      const prevStage = doc.stages[i];
+      const prevEntry = this.getShotEntry(prevStage.id, shot.id);
+      if (prevEntry.thumbnail) {
+        return {
+          url: prevEntry.thumbnail,
+          badge: `Fallback: ${prevStage.shortName}`,
+          isFallback: true,
+          refUrl: shot.refThumbnail,
+        };
+      }
+    }
+
+    if (shot.refThumbnail) {
+      return {
+        url: shot.refThumbnail,
+        badge: 'Ref: Animatic',
+        isFallback: true,
+      };
+    }
+
+    return null;
+  }
+
   getSequenceStats(stageId: string, seq: SequenceDefinition): SequenceStats {
     let done = 0;
     let review = 0;
@@ -290,6 +340,7 @@ class TrackerStore {
     };
     if (!next.version) delete next.version;
     if (!next.note) delete next.note;
+    if (!next.thumbnail) delete next.thumbnail;
     this.doc.progress[stageId][shotKey] = next;
     this.persistDraft();
   }

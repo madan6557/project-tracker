@@ -1248,6 +1248,92 @@ dialog.cosmic-dialog::backdrop {
   border-color: var(--sora-zircon);
 }
 
+/* Lazy-loaded Stage Thumbnails inside Inspector */
+.inspector-thumb-wrap {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #040711;
+  border: 1px solid var(--border-strong);
+}
+
+.inspector-thumb-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.thumb-badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgb(5 8 20 / 0.85);
+  border: 1px solid var(--sora-zircon);
+  color: var(--sora-zircon);
+}
+
+.thumb-badge.is-fallback {
+  border-color: var(--sola-topaz);
+  color: var(--sola-topaz);
+}
+
+.thumb-compare-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 4px 9px;
+  font-size: 0.74rem;
+  background: rgb(11 17 36 / 0.9);
+}
+
+.sq-thumb-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 2px 0 6px;
+}
+
+.sq-thumb-card {
+  flex: 0 0 132px;
+  scroll-snap-align: start;
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-deep);
+  cursor: pointer;
+  text-align: center;
+}
+
+.sq-thumb-card:hover {
+  border-color: var(--sora-zircon);
+}
+
+.sq-thumb-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.sq-thumb-card span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
 .editor-panel {
   display: grid;
   gap: 10px;

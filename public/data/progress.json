@@ -11,7 +11,7 @@
     "totalFrames": 10790,
     "totalDurationSec": 179.8,
     "sourceShotPlan": "TWINkle_Shot_Plan_v004.docx",
-    "updatedAt": "2026-11-25T15:42:41.424Z"
+    "updatedAt": "2026-11-26T02:29:41+00:00"
   },
   "stages": [
     {
@@ -77,7 +77,7 @@
       "folderName": "SQ001_Neutron_Encounter",
       "title": "Neutron Encounter",
       "timeRange": "00:00.0 – 00:16.0",
-      "durationSec": 16,
+      "durationSec": 16.0,
       "totalFrames": 960,
       "shots": [
         {
@@ -89,8 +89,9 @@
           "frames60fps": "1-420",
           "frameCount60fps": 420,
           "timeRange": "00:00.0 – 00:07.0",
-          "durationSec": 7,
-          "summary": "Opening: J mengorbit Nstar (CCW). E muncul dengan timing & kurva akselerasi (pelan -> cepat) persis animatic. Wajib terjadi flash dulu baru E bergerak; karena masih jauh, E tampil sebagai cahaya bintang..."
+          "durationSec": 7.0,
+          "summary": "Opening: J mengorbit Nstar (CCW). E muncul dengan timing & kurva akselerasi (pelan -> cepat) persis animatic. Wajib terjadi flash dulu baru E bergerak; karena masih jauh, E tampil sebagai cahaya bintang...",
+          "refThumbnail": "./thumbnails/animatic/SQ01-SH01.webp"
         },
         {
           "id": "SQ01-SH02",
@@ -102,7 +103,8 @@
           "frameCount60fps": 250,
           "timeRange": "00:07.0 – 00:11.2",
           "durationSec": 4.2,
-          "summary": "E masuk orbit J hingga bertabrakan. J memunculkan shield pelindung agar tak rusak, sementara E rusak dan sebagian materialnya tersebar. Trajektori keduanya berubah; kamera pasca-tabrakan terkunci mengikuti J..."
+          "summary": "E masuk orbit J hingga bertabrakan. J memunculkan shield pelindung agar tak rusak, sementara E rusak dan sebagian materialnya tersebar. Trajektori keduanya berubah; kamera pasca-tabrakan terkunci mengikuti J...",
+          "refThumbnail": "./thumbnails/animatic/SQ01-SH02.webp"
         },
         {
           "id": "SQ01-SH03",
@@ -114,7 +116,8 @@
           "frameCount60fps": 130,
           "timeRange": "00:11.2 – 00:13.3",
           "durationSec": 2.2,
-          "summary": "Top shot perubahan trajektori pascatabrakan: J menjauh ke kiri dan E berbelok menuju Nstar. Kunci timing: pelepasan pelindung/shield J terjadi di sekitar setengah durasi shot."
+          "summary": "Top shot perubahan trajektori pascatabrakan: J menjauh ke kiri dan E berbelok menuju Nstar. Kunci timing: pelepasan pelindung/shield J terjadi di sekitar setengah durasi shot.",
+          "refThumbnail": "./thumbnails/animatic/SQ01-SH03.webp"
         },
         {
           "id": "SQ01-SH04",
@@ -126,7 +129,8 @@
           "frameCount60fps": 160,
           "timeRange": "00:13.3 – 00:16.0",
           "durationSec": 2.7,
-          "summary": "E memicu ledakan Nstar (flash lalu blast). Pelindung J retak dan pecah seperti kaca; pecahan J tampil sebagai batu pecah akibat tekanan/benturan dengan ion blast yang mengalir melewati sela-sela pecahan."
+          "summary": "E memicu ledakan Nstar (flash lalu blast). Pelindung J retak dan pecah seperti kaca; pecahan J tampil sebagai batu pecah akibat tekanan/benturan dengan ion blast yang mengalir melewati sela-sela pecahan.",
+          "refThumbnail": "./thumbnails/animatic/SQ01-SH04.webp"
         }
       ]
     },
@@ -148,7 +152,8 @@
           "frameCount60fps": 150,
           "timeRange": "00:16.0 – 00:18.5",
           "durationSec": 2.5,
-          "summary": "Kotak merah di animatic adalah guide transisi sudut kamera dari bottom view ke top view. Titik biru adalah cluster fragmentasi J berekor komet (comet trail). Fokus kamera pada cluster baris ke-2 dari bottom..."
+          "summary": "Kotak merah di animatic adalah guide transisi sudut kamera dari bottom view ke top view. Titik biru adalah cluster fragmentasi J berekor komet (comet trail). Fokus kamera pada cluster baris ke-2 dari bottom...",
+          "refThumbnail": "./thumbnails/animatic/SQ02-SH01.webp"
         },
         {
           "id": "SQ02-SH02",
@@ -159,8 +164,9 @@
           "frames60fps": "1111-1410",
           "frameCount60fps": 300,
           "timeRange": "00:18.5 – 00:23.5",
-          "durationSec": 5,
-          "summary": "Fokus ke fragmen spesifik Sola & Sora (ber-comet trail) yang menabrak batu lain hingga Sora terlepas. Sola meluncurkan jaring oranye (persis animatic) namun gagal menggapai, lalu memisahkan diri mengejar..."
+          "durationSec": 5.0,
+          "summary": "Fokus ke fragmen spesifik Sola & Sora (ber-comet trail) yang menabrak batu lain hingga Sora terlepas. Sola meluncurkan jaring oranye (persis animatic) namun gagal menggapai, lalu memisahkan diri mengejar...",
+          "refThumbnail": "./thumbnails/animatic/SQ02-SH02.webp"
         },
         {
           "id": "SQ02-SH03",
@@ -171,8 +177,9 @@
           "frames60fps": "1411-1590",
           "frameCount60fps": 180,
           "timeRange": "00:23.5 – 00:26.5",
-          "durationSec": 3,
-          "summary": "Tampilkan perpisahan trajektori antara Sola & Sora terhadap fragmen utama. Rasio jarak dan kecepatan mengikuti animatic secara persis, disertai comet trail di belakang subjek untuk estetika."
+          "durationSec": 3.0,
+          "summary": "Tampilkan perpisahan trajektori antara Sola & Sora terhadap fragmen utama. Rasio jarak dan kecepatan mengikuti animatic secara persis, disertai comet trail di belakang subjek untuk estetika.",
+          "refThumbnail": "./thumbnails/animatic/SQ02-SH03.webp"
         }
       ]
     },
@@ -194,7 +201,8 @@
           "frameCount60fps": 290,
           "timeRange": "00:26.5 – 00:31.3",
           "durationSec": 4.8,
-          "summary": "Close-up Sola & Sora melaju masuk tarikan gravitasi wormhole (blob merah di animatic = placeholder; wormhole berupa white dot & distorsi sekitar). Pertahankan trail, efek plasma tipis di depan, serta serpihan..."
+          "summary": "Close-up Sola & Sora melaju masuk tarikan gravitasi wormhole (blob merah di animatic = placeholder; wormhole berupa white dot & distorsi sekitar). Pertahankan trail, efek plasma tipis di depan, serta serpihan...",
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH01.webp"
         },
         {
           "id": "SQ03-SH02",
@@ -205,8 +213,9 @@
           "frames60fps": "1881-2120",
           "frameCount60fps": 240,
           "timeRange": "00:31.3 – 00:35.3",
-          "durationSec": 4,
-          "summary": "Layar hitam di animatic disederhanakan; wujudkan sebagai distorsi tunnel wormhole space sci-fi (referensi utama: adegan masuk wormhole di game Species Unknown) dengan Sola-Sora di dalamnya, lalu ditutup flash..."
+          "durationSec": 4.0,
+          "summary": "Layar hitam di animatic disederhanakan; wujudkan sebagai distorsi tunnel wormhole space sci-fi (referensi utama: adegan masuk wormhole di game Species Unknown) dengan Sola-Sora di dalamnya, lalu ditutup flash...",
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH02.webp"
         },
         {
           "id": "SQ03-SH03",
@@ -218,7 +227,8 @@
           "frameCount60fps": 90,
           "timeRange": "00:35.3 – 00:36.8",
           "durationSec": 1.5,
-          "summary": "Sola & Sora sudah berwujud humanoid (tanpa adegan transformasi) melaju di dalam tabung Cosmic Tunnel. Tekankan perjalanan di tabung lewat gerak kontinu garis lengkung & cincin/lingkaran dinding tabung serta..."
+          "summary": "Sola & Sora sudah berwujud humanoid (tanpa adegan transformasi) melaju di dalam tabung Cosmic Tunnel. Tekankan perjalanan di tabung lewat gerak kontinu garis lengkung & cincin/lingkaran dinding tabung serta...",
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH03.webp"
         }
       ]
     },
@@ -240,7 +250,8 @@
           "frameCount60fps": 490,
           "timeRange": "00:36.8 – 00:45.0",
           "durationSec": 8.2,
-          "summary": "Sola terbangun di tabung Cosmic Tunnel (tekankan gerak garis lengkung & lingkaran tabung + passing particle cepat ala kartun/anime berlari). Di latar belakang, gelombang kosmik meregang hingga linear lalu..."
+          "summary": "Sola terbangun di tabung Cosmic Tunnel (tekankan gerak garis lengkung & lingkaran tabung + passing particle cepat ala kartun/anime berlari). Di latar belakang, gelombang kosmik meregang hingga linear lalu...",
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH01.webp"
         },
         {
           "id": "SQ04-SH02",
@@ -252,7 +263,8 @@
           "frameCount60fps": 70,
           "timeRange": "00:45.0 – 00:46.2",
           "durationSec": 1.2,
-          "summary": "Sola memandang ke depan sambil terus melaju di dalam tabung Cosmic Tunnel (lingkaran di animatic = dinding tabung). Wajib tekankan pergerakan kontinu garis lengkung & lingkaran tabung serta passing..."
+          "summary": "Sola memandang ke depan sambil terus melaju di dalam tabung Cosmic Tunnel (lingkaran di animatic = dinding tabung). Wajib tekankan pergerakan kontinu garis lengkung & lingkaran tabung serta passing...",
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH02.webp"
         },
         {
           "id": "SQ04-SH03",
@@ -264,7 +276,8 @@
           "frameCount60fps": 100,
           "timeRange": "00:46.2 – 00:47.8",
           "durationSec": 1.7,
-          "summary": "Tabung Cosmic Tunnel bertabrakan dengan trajektori Cosmic Cloud; Sola memberi pelindung ke Sora sebelum masuk awan. Tekankan perjalanan di tabung lewat gerak garis lengkung & lingkaran dinding tabung plus..."
+          "summary": "Tabung Cosmic Tunnel bertabrakan dengan trajektori Cosmic Cloud; Sola memberi pelindung ke Sora sebelum masuk awan. Tekankan perjalanan di tabung lewat gerak garis lengkung & lingkaran dinding tabung plus...",
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH03.webp"
         },
         {
           "id": "SQ04-SH04",
@@ -276,7 +289,8 @@
           "frameCount60fps": 100,
           "timeRange": "00:47.8 – 00:49.5",
           "durationSec": 1.7,
-          "summary": "Momen menabrak Cosmic Cloud: visualkan seperti awan badai berkilat penuh micro particle dengan shedding partikel kuning dari Sola akibat terkikis partikel. Pertahankan rasa laju di tabung (garis lengkung &..."
+          "summary": "Momen menabrak Cosmic Cloud: visualkan seperti awan badai berkilat penuh micro particle dengan shedding partikel kuning dari Sola akibat terkikis partikel. Pertahankan rasa laju di tabung (garis lengkung &...",
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH04.webp"
         },
         {
           "id": "SQ04-SH05",
@@ -287,8 +301,9 @@
           "frames60fps": "2971-3270",
           "frameCount60fps": 300,
           "timeRange": "00:49.5 – 00:54.5",
-          "durationSec": 5,
-          "summary": "Masih di dalam Cosmic Cloud -> menjelang keluar, Sora menghilang tertutup awan; saat keluar terlihat Sora berada di cabang berbeda dan masuk ke wormhole Cosmic Tunnel, diikuti Sola. Tekankan gerak garis..."
+          "durationSec": 5.0,
+          "summary": "Masih di dalam Cosmic Cloud -> menjelang keluar, Sora menghilang tertutup awan; saat keluar terlihat Sora berada di cabang berbeda dan masuk ke wormhole Cosmic Tunnel, diikuti Sola. Tekankan gerak garis...",
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH05.webp"
         }
       ]
     },
@@ -309,8 +324,9 @@
           "frames60fps": "3271-3450",
           "frameCount60fps": 180,
           "timeRange": "00:54.5 – 00:57.5",
-          "durationSec": 3,
-          "summary": "Transisi wormhole keluar dari region sebelumnya memasuki Reverse Starfall Region—tegaskan arah starfall meluncur dari bawah ke atas layar (sketch 12 fps)."
+          "durationSec": 3.0,
+          "summary": "Transisi wormhole keluar dari region sebelumnya memasuki Reverse Starfall Region—tegaskan arah starfall meluncur dari bawah ke atas layar (sketch 12 fps).",
+          "refThumbnail": "./thumbnails/animatic/SQ05-SH01.webp"
         },
         {
           "id": "SQ05-SH02",
@@ -322,7 +338,8 @@
           "frameCount60fps": 80,
           "timeRange": "00:57.5 – 00:58.8",
           "durationSec": 1.3,
-          "summary": "Sola dalam wujud konsisten V2 terpesona melihat pemandangan Reverse Starfall; objek-objek yang meluncur melintas dari bawah adalah meteorit."
+          "summary": "Sola dalam wujud konsisten V2 terpesona melihat pemandangan Reverse Starfall; objek-objek yang meluncur melintas dari bawah adalah meteorit.",
+          "refThumbnail": "./thumbnails/animatic/SQ05-SH02.webp"
         },
         {
           "id": "SQ05-SH03",
@@ -334,7 +351,8 @@
           "frameCount60fps": 80,
           "timeRange": "00:58.8 – 01:00.2",
           "durationSec": 1.3,
-          "summary": "POV berbeda namun tetap tampilkan hujan Reverse Starfall dari bawah beserta meteorit yang melintas super dekat di depan Sola sebelum ia masuk ke portal berikutnya."
+          "summary": "POV berbeda namun tetap tampilkan hujan Reverse Starfall dari bawah beserta meteorit yang melintas super dekat di depan Sola sebelum ia masuk ke portal berikutnya.",
+          "refThumbnail": "./thumbnails/animatic/SQ05-SH03.webp"
         }
       ]
     },
@@ -355,8 +373,9 @@
           "frames60fps": "3611-3790",
           "frameCount60fps": 180,
           "timeRange": "01:00.2 – 01:03.2",
-          "durationSec": 3,
-          "summary": "Transisi masuk ke Cosmic Tunnel Region berdensitas sangat padat dengan banyak percabangan. Tekankan perjalanan di dalam tabung melalui pergerakan aktif garis lengkung & cincin/lingkaran dinding bercabang..."
+          "durationSec": 3.0,
+          "summary": "Transisi masuk ke Cosmic Tunnel Region berdensitas sangat padat dengan banyak percabangan. Tekankan perjalanan di dalam tabung melalui pergerakan aktif garis lengkung & cincin/lingkaran dinding bercabang...",
+          "refThumbnail": "./thumbnails/animatic/SQ06-SH01.webp"
         },
         {
           "id": "SQ06-SH02",
@@ -368,7 +387,8 @@
           "frameCount60fps": 90,
           "timeRange": "01:03.2 – 01:04.7",
           "durationSec": 1.5,
-          "summary": "Sola meluncur di dalam tabung Cosmic Tunnel sambil mengagumi pemandangan (ekspresi takjub, bukan panik). Tekankan pergerakan kontinu garis lengkung & lingkaran tabung di sekelilingnya serta passing..."
+          "summary": "Sola meluncur di dalam tabung Cosmic Tunnel sambil mengagumi pemandangan (ekspresi takjub, bukan panik). Tekankan pergerakan kontinu garis lengkung & lingkaran tabung di sekelilingnya serta passing...",
+          "refThumbnail": "./thumbnails/animatic/SQ06-SH02.webp"
         },
         {
           "id": "SQ06-SH03",
@@ -380,7 +400,8 @@
           "frameCount60fps": 140,
           "timeRange": "01:04.7 – 01:07.0",
           "durationSec": 2.3,
-          "summary": "Sola masih di dalam tabung Cosmic Tunnel mengagumi pemandangan, lalu melihat Sora muncul di atasnya. Pertahankan gerak garis lengkung & lingkaran dinding tabung serta passing particle/speed lines cepat ala..."
+          "summary": "Sola masih di dalam tabung Cosmic Tunnel mengagumi pemandangan, lalu melihat Sora muncul di atasnya. Pertahankan gerak garis lengkung & lingkaran dinding tabung serta passing particle/speed lines cepat ala...",
+          "refThumbnail": "./thumbnails/animatic/SQ06-SH03.webp"
         },
         {
           "id": "SQ06-SH04",
@@ -392,7 +413,8 @@
           "frameCount60fps": 470,
           "timeRange": "01:07.0 – 01:14.8",
           "durationSec": 7.8,
-          "summary": "Sola fokus mengejar Sora yang berada di cabang berbeda hingga Sora masuk portal; Sola menyusul masuk portal namun tiba di Void Region. Sepanjang koridor, tekankan gerak garis lengkung & lingkaran tabung..."
+          "summary": "Sola fokus mengejar Sora yang berada di cabang berbeda hingga Sora masuk portal; Sola menyusul masuk portal namun tiba di Void Region. Sepanjang koridor, tekankan gerak garis lengkung & lingkaran tabung...",
+          "refThumbnail": "./thumbnails/animatic/SQ06-SH04.webp"
         }
       ]
     },
@@ -414,7 +436,8 @@
           "frameCount60fps": 100,
           "timeRange": "01:14.8 – 01:16.5",
           "durationSec": 1.7,
-          "summary": "Di Void Region, Sola bertemu versi lain dirinya. Versi lain tersebut wajib mengenakan kostum Sora bernomor 12 (bukan nomor 11), dalam proporsi V2 sketch line-work 12 fps."
+          "summary": "Di Void Region, Sola bertemu versi lain dirinya. Versi lain tersebut wajib mengenakan kostum Sora bernomor 12 (bukan nomor 11), dalam proporsi V2 sketch line-work 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH01.webp"
         },
         {
           "id": "SQ07-SH02",
@@ -426,7 +449,8 @@
           "frameCount60fps": 80,
           "timeRange": "01:16.5 – 01:17.8",
           "durationSec": 1.3,
-          "summary": "Sola mengalihkan pandangan ke bawah untuk melihat versi lain dirinya di Void Region; animasikan gerakan mata & kepala menunduk halus di 12 fps."
+          "summary": "Sola mengalihkan pandangan ke bawah untuk melihat versi lain dirinya di Void Region; animasikan gerakan mata & kepala menunduk halus di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH02.webp"
         },
         {
           "id": "SQ07-SH03",
@@ -437,8 +461,9 @@
           "frames60fps": "4671-4730",
           "frameCount60fps": 60,
           "timeRange": "01:17.8 – 01:18.8",
-          "durationSec": 1,
-          "summary": "Objek di tengah frame adalah Sola versi kristal (wujud asli Topaz sebelum bertransformasi menjadi humanoid); tampilkan sebagai kristal geometris yang berkilau halus."
+          "durationSec": 1.0,
+          "summary": "Objek di tengah frame adalah Sola versi kristal (wujud asli Topaz sebelum bertransformasi menjadi humanoid); tampilkan sebagai kristal geometris yang berkilau halus.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH03.webp"
         },
         {
           "id": "SQ07-SH04",
@@ -450,7 +475,8 @@
           "frameCount60fps": 100,
           "timeRange": "01:18.8 – 01:20.5",
           "durationSec": 1.7,
-          "summary": "Sola kembali menoleh ke samping melihat versi dirinya yang lain (memakai baju Sora bernomor 12) dengan animasi 12 fps yang konsisten."
+          "summary": "Sola kembali menoleh ke samping melihat versi dirinya yang lain (memakai baju Sora bernomor 12) dengan animasi 12 fps yang konsisten.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH04.webp"
         },
         {
           "id": "SQ07-SH05",
@@ -462,7 +488,8 @@
           "frameCount60fps": 100,
           "timeRange": "01:20.5 – 01:22.2",
           "durationSec": 1.7,
-          "summary": "Shot balasan: versi lain Sola ikut memiringkan kepala karena sama-sama bingung dan penasaran; lengkapi gerak miring kepala & rambut halus di 12 fps."
+          "summary": "Shot balasan: versi lain Sola ikut memiringkan kepala karena sama-sama bingung dan penasaran; lengkapi gerak miring kepala & rambut halus di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH05.webp"
         },
         {
           "id": "SQ07-SH06",
@@ -473,8 +500,9 @@
           "frames60fps": "4931-5050",
           "frameCount60fps": 120,
           "timeRange": "01:22.2 – 01:24.2",
-          "durationSec": 2,
-          "summary": "Sola mendongak melihat ke atas ke arah kemunculan versi dirinya yang lain; animasikan pergerakan kepala & tatapan ke atas secara jelas di 12 fps."
+          "durationSec": 2.0,
+          "summary": "Sola mendongak melihat ke atas ke arah kemunculan versi dirinya yang lain; animasikan pergerakan kepala & tatapan ke atas secara jelas di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH06.webp"
         },
         {
           "id": "SQ07-SH07",
@@ -486,7 +514,8 @@
           "frameCount60fps": 90,
           "timeRange": "01:24.2 – 01:25.7",
           "durationSec": 1.5,
-          "summary": "Tampilkan Sola versi masa depan dalam posisi melayang terbalik; wajib memakai baju kuning versi masa depan sesuai ilustrasi (bukan baju lab)."
+          "summary": "Tampilkan Sola versi masa depan dalam posisi melayang terbalik; wajib memakai baju kuning versi masa depan sesuai ilustrasi (bukan baju lab).",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH07.webp"
         },
         {
           "id": "SQ07-SH08",
@@ -498,7 +527,8 @@
           "frameCount60fps": 290,
           "timeRange": "01:25.7 – 01:30.5",
           "durationSec": 4.8,
-          "summary": "Sola menoleh ke samping dan melihat deretan banyak versi lain dirinya memenuhi Void Region; ganti siluet oval polos di animatic menjadi figur-figur Sola yang jelas di 12 fps."
+          "summary": "Sola menoleh ke samping dan melihat deretan banyak versi lain dirinya memenuhi Void Region; ganti siluet oval polos di animatic menjadi figur-figur Sola yang jelas di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ07-SH08.webp"
         }
       ]
     },
@@ -520,7 +550,8 @@
           "frameCount60fps": 110,
           "timeRange": "01:30.5 – 01:32.3",
           "durationSec": 1.8,
-          "summary": "[Review PL kosong — keputusan sementara]: Ikuti animatic: zoom-out cepat dan mulus di 12 fps memperlihatkan barisan kisi puluhan hingga ratusan versi Sola di Void/Time Region. Tanya blocking: apakah kisi..."
+          "summary": "[Review PL kosong — keputusan sementara]: Ikuti animatic: zoom-out cepat dan mulus di 12 fps memperlihatkan barisan kisi puluhan hingga ratusan versi Sola di Void/Time Region. Tanya blocking: apakah kisi...",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH01.webp"
         },
         {
           "id": "SQ08-SH02",
@@ -532,7 +563,8 @@
           "frameCount60fps": 90,
           "timeRange": "01:32.3 – 01:33.8",
           "durationSec": 1.5,
-          "summary": "[Review PL kosong — keputusan sementara]: Lanjutkan kurva zoom-out dari SH01 hingga lautan versi Sola tampak sebagai ribuan titik mikroskopis memenuhi frame sebelum cut ke cahaya. Tanya blocking: seberapa..."
+          "summary": "[Review PL kosong — keputusan sementara]: Lanjutkan kurva zoom-out dari SH01 hingga lautan versi Sola tampak sebagai ribuan titik mikroskopis memenuhi frame sebelum cut ke cahaya. Tanya blocking: seberapa...",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH02.webp"
         },
         {
           "id": "SQ08-SH03",
@@ -544,7 +576,8 @@
           "frameCount60fps": 130,
           "timeRange": "01:33.8 – 01:36.0",
           "durationSec": 2.2,
-          "summary": "Di kejauhan depan mulai muncul titik cahaya yang melebar menjadi garis terang; animasikan pendaran cahaya secara halus di 12 fps."
+          "summary": "Di kejauhan depan mulai muncul titik cahaya yang melebar menjadi garis terang; animasikan pendaran cahaya secara halus di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH03.webp"
         },
         {
           "id": "SQ08-SH04",
@@ -556,7 +589,8 @@
           "frameCount60fps": 80,
           "timeRange": "01:36.0 – 01:37.3",
           "durationSec": 1.3,
-          "summary": "Garis-garis di latar adalah efek volumetrik cahaya (bukan lorong tabung). Sola mendongak melihat ke atas ke arah versi dirinya yang lain sementara cahaya kian kuat."
+          "summary": "Garis-garis di latar adalah efek volumetrik cahaya (bukan lorong tabung). Sola mendongak melihat ke atas ke arah versi dirinya yang lain sementara cahaya kian kuat.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH04.webp"
         },
         {
           "id": "SQ08-SH05",
@@ -567,8 +601,9 @@
           "frames60fps": "5841-5960",
           "frameCount60fps": 120,
           "timeRange": "01:37.3 – 01:39.3",
-          "durationSec": 2,
-          "summary": "Sosok pada shot ini adalah Sola versi piyama; mulai mengalami red-tinted fading (memudar berwarna merah seperti efek mendekat/masuk ke black hole)."
+          "durationSec": 2.0,
+          "summary": "Sosok pada shot ini adalah Sola versi piyama; mulai mengalami red-tinted fading (memudar berwarna merah seperti efek mendekat/masuk ke black hole).",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH05.webp"
         },
         {
           "id": "SQ08-SH06",
@@ -580,7 +615,8 @@
           "frameCount60fps": 80,
           "timeRange": "01:39.3 – 01:40.7",
           "durationSec": 1.3,
-          "summary": "Sola menoleh ke samping ke arah cahaya dengan gerak kepala & rambut halus 12 fps di tengah sinar volumetrik."
+          "summary": "Sola menoleh ke samping ke arah cahaya dengan gerak kepala & rambut halus 12 fps di tengah sinar volumetrik.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH06.webp"
         },
         {
           "id": "SQ08-SH07",
@@ -591,8 +627,9 @@
           "frames60fps": "6041-6160",
           "frameCount60fps": 120,
           "timeRange": "01:40.7 – 01:42.7",
-          "durationSec": 2,
-          "summary": "Sosok ini adalah Sola versi underwear saja (pakaian dalam bawah setelah melepas lab shirt pada file 3D Sola-Sora-V2), dan juga mengalami efek red fading."
+          "durationSec": 2.0,
+          "summary": "Sosok ini adalah Sola versi underwear saja (pakaian dalam bawah setelah melepas lab shirt pada file 3D Sola-Sora-V2), dan juga mengalami efek red fading.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH07.webp"
         },
         {
           "id": "SQ08-SH08",
@@ -604,7 +641,8 @@
           "frameCount60fps": 80,
           "timeRange": "01:42.7 – 01:44.0",
           "durationSec": 1.3,
-          "summary": "Sola kembali mengarahkan pandangan penuh ke sumber cahaya; animasikan gerakan menoleh dan terpaan cahaya yang makin menyilaukan."
+          "summary": "Sola kembali mengarahkan pandangan penuh ke sumber cahaya; animasikan gerakan menoleh dan terpaan cahaya yang makin menyilaukan.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH08.webp"
         },
         {
           "id": "SQ08-SH09",
@@ -616,7 +654,8 @@
           "frameCount60fps": 100,
           "timeRange": "01:44.0 – 01:45.7",
           "durationSec": 1.7,
-          "summary": "Kamera di belakang Sola (proporsi V2 konsisten) saat cahaya bintang di depan semakin terang; tambah gerak maju halus menuju cahaya."
+          "summary": "Kamera di belakang Sola (proporsi V2 konsisten) saat cahaya bintang di depan semakin terang; tambah gerak maju halus menuju cahaya.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH09.webp"
         },
         {
           "id": "SQ08-SH10",
@@ -628,7 +667,8 @@
           "frameCount60fps": 140,
           "timeRange": "01:45.7 – 01:48.0",
           "durationSec": 2.3,
-          "summary": "Cahaya memuncak semakin terang menelan siluet-siluet sekitar lalu berujung white blank (layar putih penuh) sebagai transisi keluar dari Void Region."
+          "summary": "Cahaya memuncak semakin terang menelan siluet-siluet sekitar lalu berujung white blank (layar putih penuh) sebagai transisi keluar dari Void Region.",
+          "refThumbnail": "./thumbnails/animatic/SQ08-SH10.webp"
         }
       ]
     },
@@ -637,7 +677,7 @@
       "folderName": "SQ009_Galaxy_Reveal",
       "title": "Galaxy Reveal",
       "timeRange": "01:48.0 – 02:01.0",
-      "durationSec": 13,
+      "durationSec": 13.0,
       "totalFrames": 780,
       "shots": [
         {
@@ -650,7 +690,8 @@
           "frameCount60fps": 390,
           "timeRange": "01:48.0 – 01:54.5",
           "durationSec": 6.5,
-          "summary": "Diawali black blank yang fade-out bersamaan dengan Sola membuka mata (durasi buka mata samakan dengan animatic), lalu kamera berputar menampakkan pesona angkasa di sisi datar galaksi."
+          "summary": "Diawali black blank yang fade-out bersamaan dengan Sola membuka mata (durasi buka mata samakan dengan animatic), lalu kamera berputar menampakkan pesona angkasa di sisi datar galaksi.",
+          "refThumbnail": "./thumbnails/animatic/SQ09-SH01.webp"
         },
         {
           "id": "SQ09-SH02",
@@ -662,7 +703,8 @@
           "frameCount60fps": 170,
           "timeRange": "01:54.5 – 01:57.3",
           "durationSec": 2.8,
-          "summary": "Sola memandang takjub galaksi dengan desain V2 12 fps; murni sketch line-work tanpa efek refleksi kompleks atau rendering berat (fokus ke kejelasan informasi & ekspresi)."
+          "summary": "Sola memandang takjub galaksi dengan desain V2 12 fps; murni sketch line-work tanpa efek refleksi kompleks atau rendering berat (fokus ke kejelasan informasi & ekspresi).",
+          "refThumbnail": "./thumbnails/animatic/SQ09-SH02.webp"
         },
         {
           "id": "SQ09-SH03",
@@ -674,7 +716,8 @@
           "frameCount60fps": 80,
           "timeRange": "01:57.3 – 01:58.7",
           "durationSec": 1.3,
-          "summary": "Sola penasaran dan mengangkat tangan hendak menggapai ke arah galaksi; animasikan uluran lengan & jari dengan gerak natural 12 fps."
+          "summary": "Sola penasaran dan mengangkat tangan hendak menggapai ke arah galaksi; animasikan uluran lengan & jari dengan gerak natural 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ09-SH03.webp"
         },
         {
           "id": "SQ09-SH04",
@@ -686,7 +729,8 @@
           "frameCount60fps": 140,
           "timeRange": "01:58.7 – 02:01.0",
           "durationSec": 2.3,
-          "summary": "Over-the-shoulder Sola memandang cakram datar galaksi; orientasi & kemiringan galaksi dikunci konsisten dengan SQ12 dan SQ14."
+          "summary": "Over-the-shoulder Sola memandang cakram datar galaksi; orientasi & kemiringan galaksi dikunci konsisten dengan SQ12 dan SQ14.",
+          "refThumbnail": "./thumbnails/animatic/SQ09-SH04.webp"
         }
       ]
     },
@@ -708,7 +752,8 @@
           "frameCount60fps": 150,
           "timeRange": "02:01.0 – 02:03.5",
           "durationSec": 2.5,
-          "summary": "[Review PL kosong — keputusan sementara]: Sora (bergaris biru, desain V2) meringkuk terpejam lalu perlahan membuka matanya dalam gerak halus 12 fps. Tanya blocking: dari arah mana kamera melihat Sora yang..."
+          "summary": "[Review PL kosong — keputusan sementara]: Sora (bergaris biru, desain V2) meringkuk terpejam lalu perlahan membuka matanya dalam gerak halus 12 fps. Tanya blocking: dari arah mana kamera melihat Sora yang...",
+          "refThumbnail": "./thumbnails/animatic/SQ10-SH01.webp"
         },
         {
           "id": "SQ10-SH02",
@@ -720,7 +765,8 @@
           "frameCount60fps": 110,
           "timeRange": "02:03.5 – 02:05.3",
           "durationSec": 1.8,
-          "summary": "Percikan bintang biru muncul mengikuti ketukan musik persis sesuai animatic; Sola menoleh mengarahkan pandangan ke titik cahaya biru tersebut."
+          "summary": "Percikan bintang biru muncul mengikuti ketukan musik persis sesuai animatic; Sola menoleh mengarahkan pandangan ke titik cahaya biru tersebut.",
+          "refThumbnail": "./thumbnails/animatic/SQ10-SH02.webp"
         },
         {
           "id": "SQ10-SH03",
@@ -732,7 +778,8 @@
           "frameCount60fps": 200,
           "timeRange": "02:05.3 – 02:08.7",
           "durationSec": 3.3,
-          "summary": "Medium shot Sola saat menyadari cahaya biru itu adalah Sora—tampilkan ekspresi kaget lembut yang tulus dengan geser kamera pelan 12 fps."
+          "summary": "Medium shot Sola saat menyadari cahaya biru itu adalah Sora—tampilkan ekspresi kaget lembut yang tulus dengan geser kamera pelan 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ10-SH03.webp"
         },
         {
           "id": "SQ10-SH04",
@@ -744,7 +791,8 @@
           "frameCount60fps": 160,
           "timeRange": "02:08.7 – 02:11.3",
           "durationSec": 2.7,
-          "summary": "Medium shot Sora (desain V2) saat menyadari cahaya kuning Sola—tampilkan ekspresi kaget lembut yang serasi dengan gerak kamera pelan."
+          "summary": "Medium shot Sora (desain V2) saat menyadari cahaya kuning Sola—tampilkan ekspresi kaget lembut yang serasi dengan gerak kamera pelan.",
+          "refThumbnail": "./thumbnails/animatic/SQ10-SH04.webp"
         },
         {
           "id": "SQ10-SH05",
@@ -756,7 +804,8 @@
           "frameCount60fps": 140,
           "timeRange": "02:11.3 – 02:13.7",
           "durationSec": 2.3,
-          "summary": "Extreme wide shot galaksi megah (orientasi konsisten SQ09/SQ12/SQ14) dengan posisi dua bintang (Sola kuning & Sora biru) berada di kiri-kanan seberang galaksi."
+          "summary": "Extreme wide shot galaksi megah (orientasi konsisten SQ09/SQ12/SQ14) dengan posisi dua bintang (Sola kuning & Sora biru) berada di kiri-kanan seberang galaksi.",
+          "refThumbnail": "./thumbnails/animatic/SQ10-SH05.webp"
         }
       ]
     },
@@ -765,7 +814,7 @@
       "folderName": "SQ011_Sola_Chooses",
       "title": "Sola Chooses",
       "timeRange": "02:13.7 – 02:20.7",
-      "durationSec": 7,
+      "durationSec": 7.0,
       "totalFrames": 420,
       "shots": [
         {
@@ -777,8 +826,9 @@
           "frames60fps": "8021-8080",
           "frameCount60fps": 60,
           "timeRange": "02:13.7 – 02:14.7",
-          "durationSec": 1,
-          "summary": "Sola menimbang pilihan (desain V2 konsisten); jeda batin cukup mengikuti timing animatic karena adegan ini berulang lagi setelah insert memandang galaksi."
+          "durationSec": 1.0,
+          "summary": "Sola menimbang pilihan (desain V2 konsisten); jeda batin cukup mengikuti timing animatic karena adegan ini berulang lagi setelah insert memandang galaksi.",
+          "refThumbnail": "./thumbnails/animatic/SQ11-SH01.webp"
         },
         {
           "id": "SQ11-SH02",
@@ -790,7 +840,8 @@
           "frameCount60fps": 70,
           "timeRange": "02:14.7 – 02:15.8",
           "durationSec": 1.2,
-          "summary": "Insert Sola memandang bentangan galaksi sebagai opsi tujuan; tampilkan dalam sketch line-work 12 fps dengan gerak dorong kamera sangat halus."
+          "summary": "Insert Sola memandang bentangan galaksi sebagai opsi tujuan; tampilkan dalam sketch line-work 12 fps dengan gerak dorong kamera sangat halus.",
+          "refThumbnail": "./thumbnails/animatic/SQ11-SH02.webp"
         },
         {
           "id": "SQ11-SH03",
@@ -802,7 +853,8 @@
           "frameCount60fps": 110,
           "timeRange": "02:15.8 – 02:17.7",
           "durationSec": 1.8,
-          "summary": "Close-up Sola (desain V2) membulatkan tekad memilih menyusul Sora; belum ada perubahan ke wujud cahaya pada shot ini."
+          "summary": "Close-up Sola (desain V2) membulatkan tekad memilih menyusul Sora; belum ada perubahan ke wujud cahaya pada shot ini.",
+          "refThumbnail": "./thumbnails/animatic/SQ11-SH03.webp"
         },
         {
           "id": "SQ11-SH04",
@@ -813,8 +865,9 @@
           "frames60fps": "8261-8440",
           "frameCount60fps": 180,
           "timeRange": "02:17.7 – 02:20.7",
-          "durationSec": 3,
-          "summary": "Sola mengambil ancang-ancang lalu secara instan berubah menjadi berkas cahaya dan melesat menuju bintang biru Sora di kejauhan."
+          "durationSec": 3.0,
+          "summary": "Sola mengambil ancang-ancang lalu secara instan berubah menjadi berkas cahaya dan melesat menuju bintang biru Sora di kejauhan.",
+          "refThumbnail": "./thumbnails/animatic/SQ11-SH04.webp"
         }
       ]
     },
@@ -836,7 +889,8 @@
           "frameCount60fps": 250,
           "timeRange": "02:20.7 – 02:24.8",
           "durationSec": 4.2,
-          "summary": "Sola dalam wujud berkas cahaya kuning meluncur melintasi ruang vakum di sisi kiri galaksi dengan kecepatan konstan di setiap frame 12 fps."
+          "summary": "Sola dalam wujud berkas cahaya kuning meluncur melintasi ruang vakum di sisi kiri galaksi dengan kecepatan konstan di setiap frame 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ12-SH01.webp"
         },
         {
           "id": "SQ12-SH02",
@@ -848,7 +902,8 @@
           "frameCount60fps": 110,
           "timeRange": "02:24.8 – 02:26.7",
           "durationSec": 1.8,
-          "summary": "Shot tambahan dipertahankan: close-up Sora (desain V2) dengan ekspresi kaget ringan dan bingung menatap ke arah datangnya cahaya Sola."
+          "summary": "Shot tambahan dipertahankan: close-up Sora (desain V2) dengan ekspresi kaget ringan dan bingung menatap ke arah datangnya cahaya Sola.",
+          "refThumbnail": "./thumbnails/animatic/SQ12-SH02.webp"
         },
         {
           "id": "SQ12-SH03",
@@ -860,7 +915,8 @@
           "frameCount60fps": 130,
           "timeRange": "02:26.7 – 02:28.8",
           "durationSec": 2.2,
-          "summary": "Sola melakukan fly-by cepat di atas black hole (piringan merah yang membesar terkonfirmasi sebagai black hole) dengan lengkung lintasan halus 12 fps."
+          "summary": "Sola melakukan fly-by cepat di atas black hole (piringan merah yang membesar terkonfirmasi sebagai black hole) dengan lengkung lintasan halus 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ12-SH03.webp"
         },
         {
           "id": "SQ12-SH04",
@@ -872,7 +928,8 @@
           "frameCount60fps": 260,
           "timeRange": "02:28.8 – 02:33.2",
           "durationSec": 4.3,
-          "summary": "Trajektori Sola tertarik gravitasi black hole; kecepatannya menurun sehingga ia berubah kembali ke wujud humanoid untuk mengoreksi arah, lalu kembali melesat ke arah Sora."
+          "summary": "Trajektori Sola tertarik gravitasi black hole; kecepatannya menurun sehingga ia berubah kembali ke wujud humanoid untuk mengoreksi arah, lalu kembali melesat ke arah Sora.",
+          "refThumbnail": "./thumbnails/animatic/SQ12-SH04.webp"
         },
         {
           "id": "SQ12-SH05",
@@ -884,7 +941,8 @@
           "frameCount60fps": 280,
           "timeRange": "02:33.2 – 02:37.8",
           "durationSec": 4.7,
-          "summary": "Sola melaju dari kiri ke kanan; ia tidak menembus galaksi melainkan melewati interseksi cahaya inti galaksi dan berpijar seperti power-up yang meningkatkan kecepatan travel-nya secara signifikan."
+          "summary": "Sola melaju dari kiri ke kanan; ia tidak menembus galaksi melainkan melewati interseksi cahaya inti galaksi dan berpijar seperti power-up yang meningkatkan kecepatan travel-nya secara signifikan.",
+          "refThumbnail": "./thumbnails/animatic/SQ12-SH05.webp"
         }
       ]
     },
@@ -906,7 +964,8 @@
           "frameCount60fps": 40,
           "timeRange": "02:37.8 – 02:38.5",
           "durationSec": 0.7,
-          "summary": "Durasi zoom-out singkat pada Sora sudah cukup (pertahankan timing animatic); tampilkan ekspresi Sora yang semakin penasaran melihat cahaya mendekat."
+          "summary": "Durasi zoom-out singkat pada Sora sudah cukup (pertahankan timing animatic); tampilkan ekspresi Sora yang semakin penasaran melihat cahaya mendekat.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH01.webp"
         },
         {
           "id": "SQ13-SH02",
@@ -918,7 +977,8 @@
           "frameCount60fps": 100,
           "timeRange": "02:38.5 – 02:40.2",
           "durationSec": 1.7,
-          "summary": "Dari belakang Sora (proporsi V2 konsisten), cahaya Sola yang terang terus mendekat dan membesar dengan kilau intens."
+          "summary": "Dari belakang Sora (proporsi V2 konsisten), cahaya Sola yang terang terus mendekat dan membesar dengan kilau intens.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH02.webp"
         },
         {
           "id": "SQ13-SH03",
@@ -930,7 +990,8 @@
           "frameCount60fps": 340,
           "timeRange": "02:40.2 – 02:45.8",
           "durationSec": 5.7,
-          "summary": "Dari jauh masih tampak sebagai cahaya bintang yang mendekat, lalu saat close-up menampakkan wujud humanoid Sola yang langsung melakukan instan stop tepat di depan Sora."
+          "summary": "Dari jauh masih tampak sebagai cahaya bintang yang mendekat, lalu saat close-up menampakkan wujud humanoid Sola yang langsung melakukan instan stop tepat di depan Sora.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH03.webp"
         },
         {
           "id": "SQ13-SH04",
@@ -942,7 +1003,8 @@
           "frameCount60fps": 160,
           "timeRange": "02:45.8 – 02:48.5",
           "durationSec": 2.7,
-          "summary": "Close-up Sola (desain V2) tersenyum senang menatap Sora setelah akhirnya bertemu kembali; haluskan kedipan mata dan rambut di 12 fps."
+          "summary": "Close-up Sola (desain V2) tersenyum senang menatap Sora setelah akhirnya bertemu kembali; haluskan kedipan mata dan rambut di 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH04.webp"
         },
         {
           "id": "SQ13-SH05",
@@ -954,7 +1016,8 @@
           "frameCount60fps": 140,
           "timeRange": "02:48.5 – 02:50.8",
           "durationSec": 2.3,
-          "summary": "Close-up balasan Sora (desain V2, bukan chibi) masih dengan ekspresi bingung membalas tatapan Sola; pertahankan gerak halus rambut dan mata 12 fps."
+          "summary": "Close-up balasan Sora (desain V2, bukan chibi) masih dengan ekspresi bingung membalas tatapan Sola; pertahankan gerak halus rambut dan mata 12 fps.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH05.webp"
         },
         {
           "id": "SQ13-SH06",
@@ -966,7 +1029,8 @@
           "frameCount60fps": 200,
           "timeRange": "02:50.8 – 02:54.2",
           "durationSec": 3.3,
-          "summary": "Medium two-shot Sola dan Sora (proporsi V2 konsisten) melayang berdampingan saja (tanpa berpegangan tangan), lalu menoleh bersama ke pemandangan di samping."
+          "summary": "Medium two-shot Sola dan Sora (proporsi V2 konsisten) melayang berdampingan saja (tanpa berpegangan tangan), lalu menoleh bersama ke pemandangan di samping.",
+          "refThumbnail": "./thumbnails/animatic/SQ13-SH06.webp"
         }
       ]
     },
@@ -988,7 +1052,8 @@
           "frameCount60fps": 140,
           "timeRange": "02:54.2 – 02:56.5",
           "durationSec": 2.3,
-          "summary": "Kamera dari belakang Sola & Sora memandang galaksi spiral & nebula biru (konsisten SQ09/SQ12); tegaskan bahwa sosok yang berada dalam orientasi terbalik (upside-down) adalah Sora."
+          "summary": "Kamera dari belakang Sola & Sora memandang galaksi spiral & nebula biru (konsisten SQ09/SQ12); tegaskan bahwa sosok yang berada dalam orientasi terbalik (upside-down) adalah Sora.",
+          "refThumbnail": "./thumbnails/animatic/SQ14-SH01.webp"
         },
         {
           "id": "SQ14-SH02",
@@ -1000,7 +1065,8 @@
           "frameCount60fps": 200,
           "timeRange": "02:56.5 – 02:59.8",
           "durationSec": 3.3,
-          "summary": "Extreme wide shot penutup menampilkan galaksi spiral, nebula biru, dan dua kilapan kembar Sola-Sora bersanding kecil, lalu diakhiri instan black (cut langsung ke hitam) di akhir shot."
+          "summary": "Extreme wide shot penutup menampilkan galaksi spiral, nebula biru, dan dua kilapan kembar Sola-Sora bersanding kecil, lalu diakhiri instan black (cut langsung ke hitam) di akhir shot.",
+          "refThumbnail": "./thumbnails/animatic/SQ14-SH02.webp"
         }
       ]
     }
@@ -1345,13 +1411,31 @@
         "note": "Scaffold range file siap diblocking"
       }
     },
-    "animation": {},
+    "animation": {
+      "SQ01-SH01": {
+        "status": "todo",
+        "thumbnail": "./thumbnails/viewport/SQ01-SH01.webp"
+      },
+      "SQ01-SH02": {
+        "status": "todo",
+        "thumbnail": "./thumbnails/viewport/SQ01-SH02.webp"
+      },
+      "SQ01-SH03": {
+        "status": "todo",
+        "thumbnail": "./thumbnails/viewport/SQ01-SH03.webp"
+      },
+      "SQ01-SH04": {
+        "status": "todo",
+        "thumbnail": "./thumbnails/viewport/SQ01-SH04.webp"
+      }
+    },
     "lookdev": {
       "SQ01-SH01": {
         "status": "in_progress",
         "version": "Light_v017",
         "note": "Lookdev/lighting test Argon_v003 & Light_v017",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T13:54:31+00:00",
+        "thumbnail": "./thumbnails/lookdev/SQ01-SH01.webp"
       }
     },
     "vfx": {},
@@ -1360,7 +1444,8 @@
         "status": "in_progress",
         "version": "Light_v017",
         "note": "Lookdev/lighting test Argon_v003 & Light_v017",
-        "updatedAt": "2026-11-25T13:54:31+00:00"
+        "updatedAt": "2026-11-25T13:54:31+00:00",
+        "thumbnail": "./thumbnails/lookdev/SQ01-SH01.webp"
       }
     },
     "rendering": {},

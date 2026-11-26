@@ -33,6 +33,7 @@ export interface ShotDefinition {
   timeRange: string;
   durationSec: number;
   summary: string;
+  refThumbnail?: string;
 }
 
 export interface SequenceDefinition {
@@ -49,7 +50,15 @@ export interface ProgressEntry {
   status: ProgressStatus;
   version?: string;
   note?: string;
+  thumbnail?: string;
   updatedAt?: string;
+}
+
+export interface ResolvedThumbnail {
+  url: string;
+  badge: string;
+  isFallback: boolean;
+  refUrl?: string;
 }
 
 export interface ProjectProgressDocument {

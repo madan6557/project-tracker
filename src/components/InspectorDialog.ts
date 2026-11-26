@@ -5,6 +5,7 @@ import { escapeHtml, wireModalDialog } from '../utils/dialogHelpers';
 export class InspectorDialog {
   private dialog: HTMLDialogElement;
   private content: HTMLElement;
+  private showAnimaticRef = false;
 
   constructor(dialog: HTMLDialogElement, content: HTMLElement) {
     this.dialog = dialog;
@@ -13,6 +14,7 @@ export class InspectorDialog {
   }
 
   openShot(sqId: string, shot: ShotDefinition): void {
+    this.showAnimaticRef = false;
     this.renderShotModal(sqId, shot);
     if (!this.dialog.open) this.dialog.showModal();
   }
@@ -31,6 +33,30 @@ export class InspectorDialog {
     const entry = store.getShotEntry(stageId, shot.id);
     const adminUnlocked = store.isAdminUnlocked();
     const editMode = adminUnlocked && store.isEditMode();
+    const resolvedThumb = store.resolveShotThumbnail(stageId, shot);
+    const canCompareRef = Boolean(resolvedThumb?.refUrl && resolvedThumb.refUrl !== resolvedThumb.url);
+    const displayedUrl =
+      this.showAnimaticRef && resolvedThumb?.refUrl ? resolvedThumb.refUrl : resolvedThumb?.url ?? '';
+    const displayedBadge =
+      this.showAnimaticRef && canCompareRef ? 'Ref: Animatic' : resolvedThumb?.badge ?? '';
+
+    const thumbHtml = resolvedThumb
+      ? `<figure class="inspector-thumb-wrap">
+           <img
+             src="${escapeHtml(displayedUrl)}"
+             alt="Preview ${escapeHtml(shot.fullCode)} (${escapeHtml(displayedBadge)})"
+             loading="lazy"
+             decoding="async"
+             class="inspector-thumb-img"
+           />
+           <span class="thumb-badge ${!this.showAnimaticRef && resolvedThumb.isFallback ? 'is-fallback' : ''}">${escapeHtml(displayedBadge)}</span>
+           ${
+             canCompareRef
+               ? `<button type="button" class="btn thumb-compare-btn" id="btn-toggle-ref-thumb">${this.showAnimaticRef ? 'Lihat Preview Stage' : 'Lihat Ref Animatic'}</button>`
+               : ''
+           }
+         </figure>`
+      : '';
 
     const crossStageHtml = doc.stages
       .map((st) => {
@@ -68,6 +94,8 @@ export class InspectorDialog {
         </div>
         <button type="button" class="btn" id="inspector-close-top" autofocus>Tutup</button>
       </header>
+
+      ${thumbHtml}
 
       <div class="spec-grid">
         <div class="spec-box">
@@ -117,6 +145,10 @@ export class InspectorDialog {
                  <span>Catatan</span>
                  <textarea id="shot-note-input" rows="2" placeholder="Catatan blok, kamera, atau review...">${escapeHtml(entry.note ?? '')}</textarea>
                </label>
+               <label class="form-field">
+                 <span>Thumbnail Stage (opsional, URL atau ./thumbnails/...)</span>
+                 <input type="text" id="shot-thumb-input" value="${escapeHtml(entry.thumbnail ?? '')}" placeholder="./thumbnails/lookdev/${escapeHtml(shot.id)}.webp" />
+               </label>
                <div class="dialog-actions">
                  <button type="button" class="btn btn-primary" id="save-shot-edit">Simpan Perubahan</button>
                </div>
@@ -130,9 +162,15 @@ export class InspectorDialog {
 
     this.content.querySelector('#inspector-close-top')?.addEventListener('click', () => this.dialog.close());
 
+    this.content.querySelector('#btn-toggle-ref-thumb')?.addEventListener('click', () => {
+      this.showAnimaticRef = !this.showAnimaticRef;
+      this.renderShotModal(sqId, shot);
+    });
+
     this.content.querySelectorAll<HTMLButtonElement>('[data-jump-stage]').forEach((btn) => {
       btn.addEventListener('click', () => {
         if (btn.dataset.jumpStage) {
+          this.showAnimaticRef = false;
           store.setActiveStage(btn.dataset.jumpStage);
           this.renderShotModal(sqId, shot);
         }
@@ -157,7 +195,8 @@ export class InspectorDialog {
       this.content.querySelector('#save-shot-edit')?.addEventListener('click', () => {
         const version = (this.content.querySelector('#shot-version-input') as HTMLInputElement).value.trim();
         const note = (this.content.querySelector('#shot-note-input') as HTMLTextAreaElement).value.trim();
-        store.updateShotEntry(stageId, shot.id, { status: pendingStatus, version, note });
+        const thumbnail = (this.content.querySelector('#shot-thumb-input') as HTMLInputElement).value.trim();
+        store.updateShotEntry(stageId, shot.id, { status: pendingStatus, version, note, thumbnail });
         this.renderShotModal(sqId, shot);
       });
     }
@@ -171,6 +210,19 @@ export class InspectorDialog {
     const sqStats = store.getSequenceStats(stageId, seq);
     const adminUnlocked = store.isAdminUnlocked();
     const editMode = adminUnlocked && store.isEditMode();
+
+    const shotThumbs = seq.shots
+      .map((sh) => {
+        const res = store.resolveShotThumbnail(stageId, sh);
+        if (!res) return '';
+        return `
+          <button type="button" class="sq-thumb-card" data-open-shot="${escapeHtml(sh.id)}">
+            <img src="${escapeHtml(res.url)}" alt="${escapeHtml(sh.code)}" loading="lazy" decoding="async" />
+            <span>${escapeHtml(sh.code)}</span>
+          </button>
+        `;
+      })
+      .join('');
 
     const shotRows = seq.shots
       .map((sh) => {
@@ -218,6 +270,12 @@ export class InspectorDialog {
           <span class="spec-value">${seq.totalFrames}f (${seq.durationSec.toFixed(1)}s)</span>
         </div>
       </div>
+
+      ${
+        shotThumbs
+          ? `<div class="sq-thumb-strip scroller" aria-label="Thumbnail Shot ${escapeHtml(seq.id)}">${shotThumbs}</div>`
+          : ''
+      }
 
       ${
         editMode
