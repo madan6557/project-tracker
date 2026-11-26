@@ -1099,21 +1099,21 @@
       },
       "SQ02-SH01": {
         "status": "review",
-        "version": "v002",
-        "note": "TWINkle_SQ02_SH01_Range_v002.blend (15 fragments + Camera Follow Path)",
-        "updatedAt": "2026-11-26T04:39:07+00:00"
+        "version": "v003",
+        "note": "Blocking fragmen dan trail terpasang di Master. Review frame 961–1110.",
+        "updatedAt": "2026-11-26T10:51:19Z"
       },
       "SQ02-SH02": {
-        "status": "in_progress",
-        "version": "v008",
-        "note": "Blocking berlangsung. Main, Sora, dan Sola sudah memakai path setelah impact. Cek siluet Sola saat transisi di frame 1321.",
-        "updatedAt": "2026-11-26T07:23:11Z"
+        "status": "review",
+        "version": "v024",
+        "note": "Impact, web Sola, dan pemisahan memakai file gabungan SH02–SH03. Review di Master pada frame 1111–1410.",
+        "updatedAt": "2026-11-26T10:51:19Z"
       },
       "SQ02-SH03": {
-        "status": "in_progress",
-        "version": "v001",
-        "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:58:59.057Z"
+        "status": "review",
+        "version": "v024",
+        "note": "Top view dan fragmen yang melintas memakai file gabungan SH02–SH03. Review di Master pada frame 1411–1590.",
+        "updatedAt": "2026-11-26T10:51:19Z"
       },
       "SQ03-SH01": {
         "status": "todo",
