@@ -1105,9 +1105,9 @@
       },
       "SQ02-SH02": {
         "status": "in_progress",
-        "version": "v001",
-        "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:58:59.057Z"
+        "version": "v008",
+        "note": "Blocking berlangsung. Main, Sora, dan Sola sudah memakai path setelah impact. Cek siluet Sola saat transisi di frame 1321.",
+        "updatedAt": "2026-11-26T07:23:11Z"
       },
       "SQ02-SH03": {
         "status": "in_progress",
