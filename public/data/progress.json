@@ -11,7 +11,7 @@
     "totalFrames": 10790,
     "totalDurationSec": 179.8,
     "sourceShotPlan": "TWINkle_Shot_Plan_v004.docx",
-    "updatedAt": "2026-11-26T02:29:41+00:00"
+    "updatedAt": "2026-11-26T04:39:07+00:00"
   },
   "stages": [
     {
@@ -1098,10 +1098,10 @@
         "updatedAt": "2026-11-25T15:42:41.424Z"
       },
       "SQ02-SH01": {
-        "status": "in_progress",
-        "version": "v001",
-        "note": "Scaffold range file siap diblocking",
-        "updatedAt": "2026-11-25T14:58:59.057Z"
+        "status": "review",
+        "version": "v002",
+        "note": "TWINkle_SQ02_SH01_Range_v002.blend (15 fragments + Camera Follow Path)",
+        "updatedAt": "2026-11-26T04:39:07+00:00"
       },
       "SQ02-SH02": {
         "status": "in_progress",
