@@ -1098,22 +1098,22 @@
         "updatedAt": "2026-11-25T15:42:41.424Z"
       },
       "SQ02-SH01": {
-        "status": "review",
+        "status": "done",
         "version": "v003",
         "note": "Blocking fragmen dan trail terpasang di Master. Review frame 961–1110.",
-        "updatedAt": "2026-11-26T10:51:19Z"
+        "updatedAt": "2026-11-26T11:00:50Z"
       },
       "SQ02-SH02": {
-        "status": "review",
+        "status": "done",
         "version": "v024",
         "note": "Impact, web Sola, dan pemisahan memakai file gabungan SH02–SH03. Review di Master pada frame 1111–1410.",
-        "updatedAt": "2026-11-26T10:51:19Z"
+        "updatedAt": "2026-11-26T11:00:50Z"
       },
       "SQ02-SH03": {
-        "status": "review",
+        "status": "done",
         "version": "v024",
         "note": "Top view dan fragmen yang melintas memakai file gabungan SH02–SH03. Review di Master pada frame 1411–1590.",
-        "updatedAt": "2026-11-26T10:51:19Z"
+        "updatedAt": "2026-11-26T11:00:50Z"
       },
       "SQ03-SH01": {
         "status": "todo",
