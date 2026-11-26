@@ -803,21 +803,30 @@ select {
 
 .sq-expand-btn {
   position: absolute;
-  right: calc(-10px * var(--z));
-  top: calc(-10px * var(--z));
-  width: calc(24px * var(--z));
-  height: calc(24px * var(--z));
-  border-radius: 999px;
-  border: max(1px, calc(1.5px * var(--z))) solid var(--border-strong);
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
   background: var(--bg-void);
   color: var(--text-primary);
-  font-family: var(--font-mono);
-  font-size: calc(0.85rem * var(--z));
-  font-weight: 700;
   display: grid;
   place-items: center;
   cursor: pointer;
   z-index: 2;
+}
+
+.sq-expand-icon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
 }
 
 .sq-expand-btn:hover {

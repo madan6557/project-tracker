@@ -469,7 +469,11 @@ export class ProgressionCanvas {
             aria-expanded="${item.expanded ? 'true' : 'false'}"
             aria-label="${item.expanded ? 'Tutup' : 'Buka'} cabang shot ${escapeHtml(item.seq.id)}"
             title="${item.expanded ? 'Tutup cabang shot' : 'Buka cabang shot'}"
-          >${item.expanded ? '−' : '+'}</button>
+          >
+            <svg class="sq-expand-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+              <path d="${item.expanded ? 'M2 6h8' : 'M2 6h8M6 2v8'}" />
+            </svg>
+          </button>
         </div>
       `);
 
