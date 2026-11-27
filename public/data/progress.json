@@ -202,7 +202,10 @@
           "timeRange": "00:26.5 – 00:31.3",
           "durationSec": 4.8,
           "summary": "Close-up Sola & Sora melaju masuk tarikan gravitasi wormhole (blob merah di animatic = placeholder; wormhole berupa white dot & distorsi sekitar). Pertahankan trail, efek plasma tipis di depan, serta serpihan...",
-          "refThumbnail": "./thumbnails/animatic/SQ03-SH01.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH01.webp",
+          "stages": {
+            "blocking": "review"
+          }
         },
         {
           "id": "SQ03-SH02",
@@ -215,7 +218,10 @@
           "timeRange": "00:31.3 – 00:35.3",
           "durationSec": 4.0,
           "summary": "Layar hitam di animatic disederhanakan; wujudkan sebagai distorsi tunnel wormhole space sci-fi (referensi utama: adegan masuk wormhole di game Species Unknown) dengan Sola-Sora di dalamnya, lalu ditutup flash...",
-          "refThumbnail": "./thumbnails/animatic/SQ03-SH02.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH02.webp",
+          "stages": {
+            "blocking": "review"
+          }
         },
         {
           "id": "SQ03-SH03",
@@ -1454,5 +1460,6 @@
     "rendering": {},
     "compositing": {},
     "delivery": {}
-  }
+  },
+  "updatedAt": "2026-11-27T08:27:38.254162+00:00"
 }
