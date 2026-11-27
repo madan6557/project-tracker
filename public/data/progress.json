@@ -260,7 +260,10 @@
           "timeRange": "00:36.8 – 00:45.0",
           "durationSec": 8.2,
           "summary": "Sola terbangun di tabung Cosmic Tunnel (tekankan gerak garis lengkung & lingkaran tabung + passing particle cepat ala kartun/anime berlari). Di latar belakang, gelombang kosmik meregang hingga linear lalu...",
-          "refThumbnail": "./thumbnails/animatic/SQ04-SH01.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH01.webp",
+          "stages": {
+            "blocking": "in_progress"
+          }
         },
         {
           "id": "SQ04-SH02",
@@ -273,7 +276,10 @@
           "timeRange": "00:45.0 – 00:46.2",
           "durationSec": 1.2,
           "summary": "Sola memandang ke depan sambil terus melaju di dalam tabung Cosmic Tunnel (lingkaran di animatic = dinding tabung). Wajib tekankan pergerakan kontinu garis lengkung & lingkaran tabung serta passing...",
-          "refThumbnail": "./thumbnails/animatic/SQ04-SH02.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH02.webp",
+          "stages": {
+            "blocking": "in_progress"
+          }
         },
         {
           "id": "SQ04-SH03",
@@ -286,7 +292,10 @@
           "timeRange": "00:46.2 – 00:47.8",
           "durationSec": 1.7,
           "summary": "Tabung Cosmic Tunnel bertabrakan dengan trajektori Cosmic Cloud; Sola memberi pelindung ke Sora sebelum masuk awan. Tekankan perjalanan di tabung lewat gerak garis lengkung & lingkaran dinding tabung plus...",
-          "refThumbnail": "./thumbnails/animatic/SQ04-SH03.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH03.webp",
+          "stages": {
+            "blocking": "in_progress"
+          }
         },
         {
           "id": "SQ04-SH04",
@@ -299,7 +308,10 @@
           "timeRange": "00:47.8 – 00:49.5",
           "durationSec": 1.7,
           "summary": "Momen menabrak Cosmic Cloud: visualkan seperti awan badai berkilat penuh micro particle dengan shedding partikel kuning dari Sola akibat terkikis partikel. Pertahankan rasa laju di tabung (garis lengkung &...",
-          "refThumbnail": "./thumbnails/animatic/SQ04-SH04.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH04.webp",
+          "stages": {
+            "blocking": "in_progress"
+          }
         },
         {
           "id": "SQ04-SH05",
@@ -312,7 +324,10 @@
           "timeRange": "00:49.5 – 00:54.5",
           "durationSec": 5.0,
           "summary": "Masih di dalam Cosmic Cloud -> menjelang keluar, Sora menghilang tertutup awan; saat keluar terlihat Sora berada di cabang berbeda dan masuk ke wormhole Cosmic Tunnel, diikuti Sola. Tekankan gerak garis...",
-          "refThumbnail": "./thumbnails/animatic/SQ04-SH05.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ04-SH05.webp",
+          "stages": {
+            "blocking": "in_progress"
+          }
         }
       ]
     },
@@ -1143,29 +1158,34 @@
         "updatedAt": "2026-11-27T16:34:23Z"
       },
       "SQ04-SH01": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Setup dari pose dan posisi SQ03 SH03 pada frame 2210. Aset siap diblocking mulai frame 2211, tanpa keyframe bawaan.",
+        "updatedAt": "2026-11-27T17:11:13Z"
       },
       "SQ04-SH02": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Setup dari pose dan posisi SQ03 SH03 pada frame 2210. Aset siap diblocking mulai frame 2701, tanpa keyframe bawaan.",
+        "updatedAt": "2026-11-27T17:11:13Z"
       },
       "SQ04-SH03": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Setup dari pose dan posisi SQ03 SH03 pada frame 2210. Aset siap diblocking mulai frame 2771, tanpa keyframe bawaan.",
+        "updatedAt": "2026-11-27T17:11:13Z"
       },
       "SQ04-SH04": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Setup dari pose dan posisi SQ03 SH03 pada frame 2210. Aset siap diblocking mulai frame 2871, tanpa keyframe bawaan.",
+        "updatedAt": "2026-11-27T17:11:13Z"
       },
       "SQ04-SH05": {
-        "status": "todo",
+        "status": "in_progress",
         "version": "v001",
-        "note": "Scaffold range file siap diblocking"
+        "note": "Setup dari pose dan posisi SQ03 SH03 pada frame 2210. Aset siap diblocking mulai frame 2971, tanpa keyframe bawaan.",
+        "updatedAt": "2026-11-27T17:11:13Z"
       },
       "SQ05-SH01": {
         "status": "todo",
