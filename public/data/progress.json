@@ -234,7 +234,10 @@
           "timeRange": "00:35.3 – 00:36.8",
           "durationSec": 1.5,
           "summary": "Sola & Sora sudah berwujud humanoid (tanpa adegan transformasi) melaju di dalam tabung Cosmic Tunnel. Tekankan perjalanan di tabung lewat gerak kontinu garis lengkung & cincin/lingkaran dinding tabung serta...",
-          "refThumbnail": "./thumbnails/animatic/SQ03-SH03.webp"
+          "refThumbnail": "./thumbnails/animatic/SQ03-SH03.webp",
+          "stages": {
+            "blocking": "done"
+          }
         }
       ]
     },
@@ -1134,10 +1137,10 @@
         "updatedAt": "2026-11-27T09:04:32Z"
       },
       "SQ03-SH03": {
-        "status": "in_progress",
-        "version": "v001",
-        "note": "Kamera statis dan dua rig mannequin googly eye di cosmic tunnel. Joint Sola kuning dan Sora biru. Frame 2121–2210.",
-        "updatedAt": "2026-11-26T12:03:24Z"
+        "status": "done",
+        "version": "v002",
+        "note": "Sola dan Sora dengan pivot tumble terpisah. Rig dan kamera mengikuti Tunnel_path. Frame 2121–2210.",
+        "updatedAt": "2026-11-27T16:34:23Z"
       },
       "SQ04-SH01": {
         "status": "todo",
