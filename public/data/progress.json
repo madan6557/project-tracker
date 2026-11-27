@@ -1122,16 +1122,16 @@
         "updatedAt": "2026-11-26T11:00:50Z"
       },
       "SQ03-SH01": {
-        "status": "in_progress",
-        "version": "v001",
-        "note": "File gabungan SH01–SH02. Kamera statis, Sola dan Sora dalam wujud kristal, serta fragment passes di background. Frame 1591–1880.",
-        "updatedAt": "2026-11-26T12:03:24Z"
+        "status": "done",
+        "version": "v002",
+        "note": "File gabungan SH01–SH02 memakai satu kamera. Kamera mengikuti path yang bergerak bersama Sola. Fragment passes ada di background. Frame 1591–1880.",
+        "updatedAt": "2026-11-27T09:04:32Z"
       },
       "SQ03-SH02": {
-        "status": "in_progress",
-        "version": "v001",
-        "note": "Lanjut dari SH01 di file yang sama. Kamera statis, cincin wormhole sederhana dan whiteout. Frame 1881–2120.",
-        "updatedAt": "2026-11-26T12:03:24Z"
+        "status": "done",
+        "version": "v002",
+        "note": "Lanjut dari SH01 di file yang sama dengan satu kamera. Trail Sola dan Sora hilang di marker Inside tunnel, frame 1890. Range 1881–2120.",
+        "updatedAt": "2026-11-27T09:04:32Z"
       },
       "SQ03-SH03": {
         "status": "in_progress",
