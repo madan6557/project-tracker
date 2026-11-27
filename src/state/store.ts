@@ -40,8 +40,21 @@ class TrackerStore {
   private viewMode: 'map' | 'tree' = 'map';
   private filterStatus: 'all' | ProgressStatus = 'all';
   private searchQuery = '';
-  private expandedSeqs = new Set<string>(['SQ01', 'SQ02']);
+  private expandedSeqs = new Set<string>();
   private listeners = new Set<Listener>();
+
+  private computeDefaultExpandedSeqs(stageId: string): Set<string> {
+    const next = new Set<string>();
+    if (!this.doc) return next;
+    for (const seq of this.doc.sequences) {
+      const hasActiveShot = seq.shots.some((shot) => {
+        const status = this.getShotEntry(stageId, shot.id).status;
+        return status === 'in_progress' || status === 'review' || status === 'done';
+      });
+      if (hasActiveShot) next.add(seq.id);
+    }
+    return next;
+  }
 
   subscribe(fn: Listener): () => void {
     this.listeners.add(fn);
@@ -88,6 +101,7 @@ class TrackerStore {
       this.activeStageId = this.doc.stages[0].id;
     }
 
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(this.activeStageId);
     this.emit();
   }
 
@@ -108,6 +122,7 @@ class TrackerStore {
     this.adminUnlocked = true;
     sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
     this.applySavedDraftIfAny();
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(this.activeStageId);
     this.emit();
   }
 
@@ -120,6 +135,7 @@ class TrackerStore {
     if (this.publishedDoc) {
       this.doc = structuredClone(this.publishedDoc);
     }
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(this.activeStageId);
     this.emit();
   }
 
@@ -135,6 +151,7 @@ class TrackerStore {
   setActiveStage(stageId: string): void {
     if (this.activeStageId === stageId) return;
     this.activeStageId = stageId;
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(stageId);
     this.emit();
   }
 
@@ -342,6 +359,10 @@ class TrackerStore {
     if (!next.note) delete next.note;
     if (!next.thumbnail) delete next.thumbnail;
     this.doc.progress[stageId][shotKey] = next;
+    if (stageId === this.activeStageId && next.status !== 'todo') {
+      const ownerSeq = this.doc.sequences.find((sq) => sq.shots.some((sh) => sh.id === shotKey));
+      if (ownerSeq) this.expandedSeqs.add(ownerSeq.id);
+    }
     this.persistDraft();
   }
 
@@ -372,6 +393,9 @@ class TrackerStore {
       }
       this.doc.progress[stageId][shot.id] = next;
     }
+    if (stageId === this.activeStageId && status !== 'todo') {
+      this.expandedSeqs.add(seq.id);
+    }
     this.persistDraft();
   }
 
@@ -380,6 +404,7 @@ class TrackerStore {
     localStorage.removeItem(DRAFT_STORAGE_KEY);
     this.doc = structuredClone(this.publishedDoc);
     this.hasDraft = false;
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(this.activeStageId);
     this.emit();
   }
 
@@ -393,6 +418,7 @@ class TrackerStore {
       throw new Error('Format file progress.json tidak valid.');
     }
     this.doc = parsed;
+    this.expandedSeqs = this.computeDefaultExpandedSeqs(this.activeStageId);
     this.persistDraft();
   }
 }
